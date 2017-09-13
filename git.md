@@ -14,3 +14,6 @@ git commit -m "Message" // 커밋메세지와 함께 커밋
 git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치를 정하고 push
 </code>
 </pre>
+
+* 원격저장소에서 내려받기
+  * <pre><code>git clone 내려받을곳의주소</code></pre>
