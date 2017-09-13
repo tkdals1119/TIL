@@ -17,3 +17,16 @@ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치�
 
 - #### 원격저장소에서 내려받기
   - `git clone 내려받을곳의주소`
+
+- #### 브랜치목록
+  - `git branch`
+
+- #### 브랜치 삭제
+  - `git branch -d 브랜치이름` 로컬 저장소에 있는 브랜치 삭제 ( -D 강제삭제)
+  - `git push origin --delete 브랜치 이름` 원격 저장소에 있는 브랜치 삭제
+
+- #### 브랜치 이름 변경
+  - `git branch -m 기존브랜치이름 새로운브랜치이름`
+
+- #### 추가 된 이력 조회
+  - `git log --all`
