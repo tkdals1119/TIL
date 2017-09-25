@@ -17,9 +17,6 @@ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치�
 
 - #### 원격저장소에서 내려받기
   - `git clone 내려받을곳의주소`
-  
-- #### 원격저장소
-  - `git remote -v`
 
 - #### 연결 되어 있는 원격 저장소 확인
   - `git remote -v`
