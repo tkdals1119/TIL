@@ -15,6 +15,19 @@ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치�
 </code>
 </pre>
 
+
+## 오류
+<pre>
+<code>
+- ####  ! [rejected]        master -> master (non-fast forward) // 원격저장소로 push했을 때 간혹 이런 오류 발생
+  - 원격저장소에 있는 코드와 로컬저장소에 있는 코드의 버전이 맞지 않아서 발생
+  - 원격저장소에 있는 코드를 pull 받아와서 로컬저장소에 있는 코드를 갱신시킨 뒤 push 해야함
+   - `git pull origin<원격저장소 연결할 당시 생성한 url이름> 브랜치이름` // 로컬 저장소 코드 갱신
+   - `git push origin 브랜치이름` // 코드를 갱신한 뒤 push 하면 정상적으로 push 된다.
+</pre>
+
+
+
 - #### 원격저장소에서 내려받기
   - `git clone 내려받을곳의주소`
 
@@ -43,13 +56,3 @@ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치�
 
 - #### 현재 코드 상태 & 어떤 파일이 수정 되어 있는지
   - `git status`
-
-## 오류
-<pre>
-<code>
-- ####  ! [rejected]        master -> master (non-fast forward) // 원격저장소로 push했을 때 간혹 이런 오류 발생
-  - 원격저장소에 있는 코드와 로컬저장소에 있는 코드의 버전이 맞지 않아서 발생
-  - 원격저장소에 있는 코드를 pull 받아와서 로컬저장소에 있는 코드를 갱신시킨 뒤 push 해야함
-   - `git pull origin<원격저장소 연결할 당시 생성한 url이름> 브랜치이름` // 로컬 저장소 코드 갱신
-   - `git push origin 브랜치이름` // 코드를 갱신한 뒤 push 하면 정상적으로 push 된다.
-</pre>
