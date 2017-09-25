@@ -27,7 +27,7 @@ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치�
 </pre>
 
 
-##명령어
+## 명령어
 - #### 원격저장소에서 내려받기
   - `git clone 내려받을곳의주소`
 
