@@ -1,9 +1,7 @@
 # Git 명령어 모음
 ## 가장 기본이 되는 순서
 
-<pre>
-<code>
-
+```
 >초기 설정
 $ git init // 해당 폴더에서 git 을 사용할 준비를 한다는 뜻
 
@@ -20,13 +18,11 @@ $ git push origin 브랜치이름 // 생성한 브랜치를 원격저장소에�
 $ git add . // 수정 된 파일 뿐만 아니라 모든 파일을 포함 (.점이 그 표시)
 $ git commit -m "Message" // 커밋메세지와 함께 커밋
 $ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치를 정하고 push
-</code>
-</pre>
+```
 
 
 ## 오류
-<pre>
-<code>
+```
 > ! [rejected]        master -> master (non-fast forward) // 원격저장소로 push했을 때 간혹 이런 오류 발생
 
   - 원격저장소에 있는 코드와 로컬저장소에 있는 코드의 버전이 맞지 않아서 발생
@@ -34,7 +30,7 @@ $ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치
 
     $ `git pull origin<원격저장소 연결할 당시 생성한 url이름> 브랜치이름` // 로컬 저장소 코드 갱신
     $ `git push origin 브랜치이름` // 코드를 갱신한 뒤 push 하면 정상적으로 push 된다.
-</pre>
+```
 
 
 ## 명령어
