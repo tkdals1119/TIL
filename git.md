@@ -52,10 +52,10 @@ $ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치
   - `git branch -m 기존브랜치이름 새로운브랜치이름`
 
 - #### 원격 저장소에 있는 브랜치 받기
-  - `git branch -b 로컬에새로만들브랜치이름 origin(리모트할때생성한url이름)/원격저장소에있는브랜치이름`
+  - `git checkout -b 로컬에새로만들브랜치이름 origin(리모트할때생성한url이름)/원격저장소에있는브랜치이름`
 
 - #### 원격 저장소에 있는 브랜치 받기(원격 저장소 브랜치 이름과 동일하게 생성)
-  - `git branch -t origin(리모트할때생성한url이름)/원격저장소에있는브랜치이름`
+  - `git checkout -t origin(리모트할때생성한url이름)/원격저장소에있는브랜치이름`
 
 - #### 추가 된 이력 조회
   - `git log --all`
