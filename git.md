@@ -31,8 +31,11 @@ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치�
 - #### 원격저장소에서 내려받기
   - `git clone 내려받을곳의주소`
 
-- #### 연결 되어 있는 원격 저장소 확인
+- #### 연결 되어 있는 원격저장소 확인
   - `git remote -v`
+
+- #### 연결 되어 있는 원격저장소 삭제
+  - `git remote rm 원격저장소이름(ex:origin)`
 
 - #### 브랜치목록
   - `git branch -r` 원격 저장소에 있는 브랜치 목록(r=remote)
