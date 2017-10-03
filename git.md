@@ -78,3 +78,7 @@ $ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치
 
 - #### 현재 코드 상태 & 어떤 파일이 수정 되어 있는지
   - `git status`
+
+- #### 커밋 취소
+  - `git reset HEAD^` // 마지막 커밋 삭제
+  - `git reset --hard HEAD` // 마지막 커밋 상태로 되돌림
