@@ -94,5 +94,5 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
   - `git status`
 
 - #### 커밋 취소
-  - `git reset HEAD^` // 마지막 커밋 삭제
-  - `git reset --hard HEAD` // 마지막 커밋 상태로 되돌림
+  - `git reset HEAD^` 마지막 커밋 삭제
+  - `git reset --hard HEAD` 마지막 커밋 상태로 되돌림
