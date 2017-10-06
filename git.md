@@ -32,6 +32,20 @@ $ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치
     $ `git push origin 브랜치이름` // 코드를 갱신한 뒤 push 하면 정상적으로 push 된다.
 ```
 
+```
+$ git checkout -t origin/myprofile
+> fatal: Cannot update paths and switch to branch 'myprofile' at the same time.
+Did you intend to checkout 'origin/myprofile' which can not be resolved as commit ? // 원격저장소에 있는 'myprofile' 브랜치를 받으려고 할 때 오류 발생
+
+  - $ git branch -r // 원격저장소에 있는 브랜치 목록을 확인했을 때 갱신이 안된 것을 확인할 수 있다.
+  - $ git remote update // 원격저장소를 갱신시킨다.
+  - $ git branch -r // 다시 원격저장소에 있는 브랜치 목록을 확인해보면 갱신이 된 것을 볼 수 있다.
+  - $ git checkout -t origin/myprofile // 정상적으로 브랜치가 받아와지는 것을 볼 수 있다.
+
+
+
+```
+
 
 ## 명령어
 - #### 원격저장소에서 내려받기
