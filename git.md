@@ -87,6 +87,9 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
 - #### 다른 브랜치에 있는 변경 내용을 현재 브랜치와 병합
   - `git merge 가져올브랜치`
 
+- #### merge 되돌리기
+  - `git reset --merge ORIG_HEAD`
+
 - #### 변경 내용을 병합하기 전에 어떻게 변했는지 확인
   - `git diff <현재브랜치> <비교 대상 브랜치>`
 
