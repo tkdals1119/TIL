@@ -67,6 +67,7 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
 
 - #### 브랜치 이름 변경
   - `git branch -m 기존브랜치이름 새로운브랜치이름`
+    - 원격저장소에 새 브랜치를 추가시키려면 위 명령어로 작업하던 브랜치의 이름을 바꾸고 push 하면 된다.
 
 - #### 원격저장소에 있는 브랜치 받기
   - `git checkout -b 로컬에새로만들브랜치이름 origin(리모트할때생성한url이름)/원격저장소에있는브랜치이름`
