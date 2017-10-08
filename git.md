@@ -82,7 +82,7 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
 
 - #### 원격저장소에 있는 특정 브랜치를 pull 받을 때
   - `git pull origin(리모트할때생성한url이름) 브랜치이름`
-    - pull 이나 merge 할 때 메세지 적으라고 unix 화면 나올 때가 있는데 그냥 ESC -> :wq! 하고 나가면됌
+    - pull 이나 merge 할 때 메세지 적으라고 unix 화면 나올 때가 있는데 그냥 :wq! 하고 나가면됌
 
 - #### 다른 브랜치에 있는 변경 내용을 현재 브랜치와 병합
   - `git merge 가져올브랜치`
