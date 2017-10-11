@@ -41,9 +41,15 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
   - $ git remote update // 원격저장소를 갱신시킨다.
   - $ git branch -r // 다시 원격저장소에 있는 브랜치 목록을 확인해보면 갱신이 된 것을 볼 수 있다.
   - $ git checkout -t origin/myprofile // 정상적으로 브랜치가 받아와지는 것을 볼 수 있다.
+```
 
+```
+> fetch 와 pull 의 차이
+ - fetch는 원격저장소의 최신 이력을 확인할 수 있다
+   - 현재 작업중인 소스들을 변경하는 merge 작업은 하지 않는다.
 
-
+ - pull은 원격저장소의 내용을 가져와 자동으로 merge 작업을 한다.
+    - pull = fetch + merge
 ```
 
 
