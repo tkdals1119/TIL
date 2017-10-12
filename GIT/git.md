@@ -18,6 +18,10 @@ $ git push origin 브랜치이름 // 생성한 브랜치를 원격저장소에�
 $ git add . // 수정 된 파일 뿐만 아니라 모든 파일을 포함 (.점이 그 표시)
 $ git commit -m "Message" // 커밋메세지와 함께 커밋
 $ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치를 정하고 push
+
+
+> 뭔가 변경될 떄마다 변경되는 사이클
+ - pull -> commit -> push
 ```
 
 
@@ -57,6 +61,9 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
 - #### 원격저장소에서 내려받기
   - `git clone 내려받을곳의주소`
 
+- #### 원격저장소로부터 업데이트 받고 push 하기
+  - `git push -u 원격저장소이름(ex:origin) 원격저장소에있는브랜치이름`
+
 - #### 연결 되어 있는 원격저장소 확인
   - `git remote -v`
 
@@ -76,10 +83,10 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
     - 원격저장소에 새 브랜치를 추가시키려면 위 명령어로 작업하던 브랜치의 이름을 바꾸고 push 하면 된다.
 
 - #### 원격저장소에 있는 브랜치 받기
-  - `git checkout -b 로컬에새로만들브랜치이름 origin(리모트할때생성한url이름)/원격저장소에있는브랜치이름`
+  - `git checkout -b 로컬에새로만들브랜치이름 원격저장소이름(ex:origin)/원격저장소에있는브랜치이름`
 
 - #### 원격저장소에 있는 브랜치 받기(원격저장소 브랜치 이름과 동일하게 생성)
-  - `git checkout -t origin(리모트할때생성한url이름)/원격저장소에있는브랜치이름`
+  - `git checkout -t 원격저장소이름(ex:origin)/원격저장소에있는브랜치이름`
 
 - #### 추가 된 이력 조회
   - `git log --all`
@@ -88,7 +95,7 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
   - `git pull`
 
 - #### 원격저장소에 있는 특정 브랜치를 pull 받을 때
-  - `git pull origin(리모트할때생성한url이름) 브랜치이름`
+  - `git pull 원격저장소이름(ex:origin) 브랜치이름`
     - pull 이나 merge 할 때 메세지 적으라고 unix 화면 나올 때가 있는데 그냥 :wq! 하고 나가면됌
 
 - #### 다른 브랜치에 있는 변경 내용을 현재 브랜치와 병합
