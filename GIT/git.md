@@ -114,3 +114,6 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
   - `git reset HEAD^` 마지막 커밋 삭제
   - `git reset --hard HEAD` 마지막 커밋 상태로 되돌림
   - `git commit --ammend` 커밋 수정하기
+
+- #### 파일명 수정
+  - `git mv FILE_FROM FILE_TO`
