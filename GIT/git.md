@@ -110,7 +110,7 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
 - #### 현재 코드 상태 & 어떤 파일이 수정 되어 있는지
   - `git status`
 
-- #### 커밋
+- #### 커밋 관리하기
   - `git reset HEAD^` 마지막 커밋 삭제
   - `git reset --hard HEAD` 마지막 커밋 상태로 되돌림
   - `git commit --ammend` 커밋 수정하기
