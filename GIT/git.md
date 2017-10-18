@@ -27,7 +27,7 @@ $ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치
 
 ## 오류
 ```
-> ! [rejected]        master -> master (non-fast forward) // 원격저장소로 push했을 때 간혹 이런 오류 발생
+> ! [rejected]        master -> master (non-fast forward) // 원격저장소로 push 시도 시 오류 발생
 
   - 원격저장소에 있는 코드와 로컬저장소에 있는 코드의 버전이 맞지 않아서 발생
   - 원격저장소에 있는 코드를 pull 받아와서 로컬저장소에 있는 코드를 갱신시킨 뒤 push 해야함
@@ -45,6 +45,20 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
   - $ git remote update // 원격저장소를 갱신시킨다.
   - $ git branch -r // 다시 원격저장소에 있는 브랜치 목록을 확인해보면 갱신이 된 것을 볼 수 있다.
   - $ git checkout -t origin/myprofile // 정상적으로 브랜치가 받아와지는 것을 볼 수 있다.
+```
+
+```
+$ git push origin develop
+error: src refspec develop does not match any.
+error: failed to push some refs to '원격저장소 주소' // 원격저장소로 push 시도 시 오류 발생
+
+- 두 가지로 예상해본다
+  $ commit 을 하지 않고 push 를 했을 경우
+     - commit 을 진행하고 push 를 하면 정상적으로 코드가 업로드 된다
+  $ 로컬저장소에 브랜치가 존재하지 않을 경우, 즉 master만 있을 경우
+     - $ git checkout -b 생성할브랜치이름 // 로컬에 있는 master에 브랜치를 하나 생성한 뒤 push 하면 정상적으로 코드가 업로드 된다
+
+
 ```
 ## TIP
 ```
