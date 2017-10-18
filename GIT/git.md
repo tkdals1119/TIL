@@ -20,7 +20,7 @@ $ git commit -m "Message" // 커밋메세지와 함께 커밋
 $ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치를 정하고 push
 
 
-> 뭔가 변경될 떄마다 변경되는 사이클
+> 뭔가 변경될 때마다 변경되는 사이클
  - pull -> commit -> push
 ```
 
