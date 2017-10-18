@@ -110,7 +110,7 @@ error: failed to push some refs to '원격저장소 주소' // 원격저장소�
 
 - #### 원격저장소에 있는 특정 브랜치를 pull 받을 때
   - `git pull 원격저장소이름(ex:origin) 브랜치이름`
-    - pull 이나 merge 할 때 메세지 적으라고 unix 화면 나올 때가 있는데 그냥 :wq! 하고 나가면됌
+    - pull 이나 merge 할 때 메세지 적으라고 unix 화면 나올 때가 있는데 그냥 :wq! 하고 나가면됨
 
 - #### 다른 브랜치에 있는 변경 내용을 현재 브랜치와 병합
   - `git merge 가져올브랜치`
@@ -124,6 +124,11 @@ error: failed to push some refs to '원격저장소 주소' // 원격저장소�
 - #### 현재 코드 상태 & 어떤 파일이 수정 되어 있는지
   - `git status`
 
-- #### 커밋 취소
+- #### 커밋 관리하기
   - `git reset HEAD^` 마지막 커밋 삭제
   - `git reset --hard HEAD` 마지막 커밋 상태로 되돌림
+  - `git commit --ammend` 커밋 수정하기
+  - `git checkout HEAD~1` working directory 와 staging area를 모두 1단계 전 커밋으로 돌려줌
+
+- #### 파일명 수정
+  - `git mv FILE_FROM FILE_TO`
