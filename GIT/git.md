@@ -20,14 +20,14 @@ $ git commit -m "Message" // 커밋메세지와 함께 커밋
 $ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치를 정하고 push
 
 
-> 뭔가 변경될 떄마다 변경되는 사이클
+> 뭔가 변경될 때마다 변경되는 사이클
  - pull -> commit -> push
 ```
 
 
 ## 오류
 ```
-> ! [rejected]        master -> master (non-fast forward) // 원격저장소로 push했을 때 간혹 이런 오류 발생
+> ! [rejected]        master -> master (non-fast forward) // 원격저장소로 push 시도 시 오류 발생
 
   - 원격저장소에 있는 코드와 로컬저장소에 있는 코드의 버전이 맞지 않아서 발생
   - 원격저장소에 있는 코드를 pull 받아와서 로컬저장소에 있는 코드를 갱신시킨 뒤 push 해야함
@@ -45,6 +45,18 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
   - $ git remote update // 원격저장소를 갱신시킨다.
   - $ git branch -r // 다시 원격저장소에 있는 브랜치 목록을 확인해보면 갱신이 된 것을 볼 수 있다.
   - $ git checkout -t origin/myprofile // 정상적으로 브랜치가 받아와지는 것을 볼 수 있다.
+```
+
+```
+$ git push origin develop
+error: src refspec develop does not match any.
+error: failed to push some refs to '원격저장소 주소' // 원격저장소로 push 시도 시 오류 발생
+
+- 두 가지로 예상해본다
+  - commit 을 하지 않고 push 를 했을 경우
+     - commit 을 진행하고 push 를 하면 정상적으로 코드가 업로드 된다
+  - 로컬저장소에 브랜치가 존재하지 않을 경우, 즉 master만 있을 경우
+     - $ git checkout -b 생성할브랜치이름 // 로컬에 있는 master에 브랜치를 하나 생성한 뒤 push 하면 정상적으로 코드가 업로드 된다
 ```
 ## TIP
 ```
@@ -96,7 +108,7 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
 
 - #### 원격저장소에 있는 특정 브랜치를 pull 받을 때
   - `git pull 원격저장소이름(ex:origin) 브랜치이름`
-    - pull 이나 merge 할 때 메세지 적으라고 unix 화면 나올 때가 있는데 그냥 :wq! 하고 나가면됨
+    - pull 이나 merge 할 때 메세지 적으라고 unix 화면 나올 때가 있는데 그냥 :wq! 하고 나가면됌
 
 - #### 다른 브랜치에 있는 변경 내용을 현재 브랜치와 병합
   - `git merge 가져올브랜치`
@@ -110,11 +122,6 @@ Did you intend to checkout 'origin/myprofile' which can not be resolved as commi
 - #### 현재 코드 상태 & 어떤 파일이 수정 되어 있는지
   - `git status`
 
-- #### 커밋 관리하기
+- #### 커밋 취소
   - `git reset HEAD^` 마지막 커밋 삭제
   - `git reset --hard HEAD` 마지막 커밋 상태로 되돌림
-  - `git commit --ammend` 커밋 수정하기
-  - `git checkout HEAD~1` working directory 와 staging area를 모두 1단계 전 커밋으로 돌려줌
-
-- #### 파일명 수정
-  - `git mv FILE_FROM FILE_TO`
