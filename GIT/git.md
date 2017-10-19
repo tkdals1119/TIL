@@ -9,7 +9,7 @@ $ git config --global user.email "you@example.com"
 or
 $ git config --global user.name "Your Name" // 초기에 bash에서 사용자 이메일 혹은 사용자 이름 지정
 
-$ git remote add origin 주소 // 원격 저장소와 연결 ( 이름을 꼭 origin 으로 안해도 됌)
+$ git remote add origin 주소 // 원격 저장소와 연결 ( 이름을 꼭 origin 으로 안해도 됨)
 $ git checkout -b 브랜치이름 // 브랜치를 생성하고 위치도 그 브랜치로 이동
 $ git push origin 브랜치이름 // 생성한 브랜치를 원격저장소에도 push 한다
 
