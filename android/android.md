@@ -10,3 +10,6 @@ dependencies {
 }
 
 ````
+
+- ####오른쪽 배치
+  -`android:gravity="right"`
