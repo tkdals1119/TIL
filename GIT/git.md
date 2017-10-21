@@ -134,3 +134,4 @@ error: failed to push some refs to '원격저장소 주소' // 원격저장소�
 
 - #### 특정 커밋 시점으로 돌아가기
   - `git checkout 커밋id`
+  - 다시 돌아가려면 `git checkout 돌아갈 브랜치 이름` 하면 된다
