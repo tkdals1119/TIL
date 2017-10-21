@@ -106,6 +106,9 @@ error: failed to push some refs to '원격저장소 주소' // 원격저장소�
 - #### 추가 된 이력 조회
   - `git log --all`
 
+- #### 커밋 로그 확인
+  - `git log`
+
 - #### 원격 저장소에 있는 코드로 로컬 저장소에 있는 코드 갱신
   - `git pull`
 
