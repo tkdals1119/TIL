@@ -66,7 +66,7 @@ error: failed to push some refs to '원격저장소 주소' // 원격저장소�
 
  - merge: fetch를 하지 않고 merge를 할 경우 그 브랜치의 최신 이력이 포함되지 않은 채 merge가 진행된다
 
- - pull은 원격저장소의 내용을 가져와 자동으로 merge 작업을 한다.
+ - pull: 원격저장소의 내용을 가져와 자동으로 merge 작업을 한다.
     - pull = fetch + merge
     - 자동으로 최신이력을 update 한 후(fetch) 병합(merge)를 진행한다
 
