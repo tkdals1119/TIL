@@ -61,13 +61,14 @@ error: failed to push some refs to '원격저장소 주소' // 원격저장소�
 ## TIP
 ```
 > fetch && merge && pull의 차이
- - fetch는 원격저장소의 최신 이력을 확인할 수 있다
+ - fetch: 원격저장소의 최신 이력을 확인할 수 있다
    - 현재 작업중인 소스들을 변경하는 merge 작업은 하지 않는다.
+
+ - merge: fetch를 하지 않고 merge를 할 경우 그 브랜치의 최신 이력이 포함되지 않은 채 merge가 진행된다
 
  - pull은 원격저장소의 내용을 가져와 자동으로 merge 작업을 한다.
     - pull = fetch + merge
-
- - fetch를 하지 않고 merge를 할 경우 그 브랜치의 최신 이력이 포함되지 않은 채 merge가 진행된다
+    - 자동으로 최신이력을 update 한 후(fetch) 병합(merge)를 진행한다
 
 > 당연한 얘기지만 로컬에 있는 빈 브랜치는 원격저장소로 push가 안된다
  - 원격저장소로 push 할 브랜치에서 commit 을 한번 이상 해주고 push 하면 정상적으로 브랜치가 push 되는 것을 볼 수 있다.
