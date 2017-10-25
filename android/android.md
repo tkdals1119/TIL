@@ -13,10 +13,11 @@ dependencies {
 }
 
 ````
-
+## 레이아웃
 - #### 오른쪽 배치
-  -`android:layout_gravity="right"`
+  - `android:layout_gravity="right"`
+
 
 - #### content
-  -`wrap_content` = 자식 컴포넌트 크기에 맞게 할당 됨
-  -`match_content` = 부모 레이아웃의 크기에 맞게 할당 됨
+  - `wrap_content` = 자식 컴포넌트 크기에 맞게 할당 됨
+  - `match_content` = 부모 레이아웃의 크기에 맞게 할당 됨
