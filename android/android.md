@@ -17,7 +17,20 @@ dependencies {
 - #### 오른쪽 배치
   - `android:layout_gravity="right"`
 
-
 - #### content
   - `wrap_content` = 자식 컴포넌트 크기에 맞게 할당 됨
   - `match_content` = 부모 레이아웃의 크기에 맞게 할당 됨
+
+
+
+## java
+ - String 변수의 널체크
+   - `String str = test.getText().toString();
+      if(str.isEmpty()) {}`
+
+ - 액티비티 이동
+   - `Intent i = new Intent(현재액티비티.this, 이동할액티비티.class);
+      startActivity(i);`
+
+ - 타이틀바 삭제
+   - `android:theme="@style/Theme.AppCompat.NoActionBar`
