@@ -37,18 +37,18 @@ dependencies {
 
  - 스플래시 설정
    - manifest 파일에서 <intent-filter> 위에 스플래시로 사용할 액티비티 선언
-   - `<activity
-            android:name=".SplashActivity"
+   - <activity
+          android:name=".SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.Dark">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>`
+        </activity>
+        
     - 스플래시로 사용할 액티비티에 초 설정하는 코드 추가
-       - `try{
+       - try{
          Thread.sleep(4000);
        }
        catch (InterruptedException e) {
@@ -56,4 +56,4 @@ dependencies {
        }
 
        startActivity(new Intent(this,MainActivity.class));
-       finish;`
+       finish;
