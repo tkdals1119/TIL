@@ -9,10 +9,13 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.8.0'
 
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.0' // 이거 꼭해야함. 이거 안해서 하루종일 시간날림
-
 }
-
 ````
+
+## 오류
+- 안드로이드 버전을 3.0으로 업데이트 하고 나서 기존에 적용이 되던 라이브러리들이 적용이 안되는 경우가 종종 있다.
+  - 나같은 경우에는 build.gradle 에 `classpath "io.realm:realm-gradle-plugin:3.1.2"` 가 원래는 3.1.2 이하였는데 3.1.2 로 수동 업데이트해주고 나니 정상적으로 build 되었다.
+`
 ## 레이아웃
 - #### 오른쪽 배치
   - `android:layout_gravity="right"`
