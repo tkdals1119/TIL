@@ -6,3 +6,6 @@
 - DB에 데이터 중복 여부 확인
   - `User.exist?(id: 변수, name: 변수)`
     - return 은 true || false
+
+- boolean value -> json
+  - `{'변수명'=>'true or false'}.to_json`
