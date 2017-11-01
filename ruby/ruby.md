@@ -14,3 +14,5 @@
   - `@id = params[:loginid]`
   - `@name = Loginusers.find_by(userid: @id)`
   - `rendor json: @name`
+
+- rails 에서 보낸 json 객체를 레트로핏이 받을 때 모델의 각 변수의 시리얼라이즈 네임이 동일해야함
