@@ -9,3 +9,8 @@
 
 - boolean value -> json
   - `{'변수명'=>'true or false'}.to_json`
+
+- rails/db 에서 loginid 로 유저 name 찾기
+  - `@id = params[:loginid]`
+  - `@name = Loginusers.find_by(userid: @id)`
+  - `rendor json: @name`
