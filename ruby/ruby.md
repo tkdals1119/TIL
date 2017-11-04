@@ -25,3 +25,6 @@
 
 - DB 갱신
   - `rake:db migrate`
+
+- if 문
+  - `else if` 가 아니라 `elsif` 이다
