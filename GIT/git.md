@@ -138,3 +138,7 @@ error: failed to push some refs to '원격저장소 주소' // 원격저장소�
 - #### 특정 커밋 시점으로 돌아가기
   - `git checkout 커밋id`
   - 다시 돌아가려면 `git checkout 돌아갈 브랜치 이름` 하면 된다
+
+- #### 변경 사항을 commit 하지 않고 다른 작업을 하고 싶은 경우
+  - 보통 add . 까지만 하고 commit 을 하지 않은 채 다른 브랜치로 이동하려 할 경우 commit 을 하고 이동하라는 메세지가 뜬다
+  - `git stash` 를 하게 되면 일종의 스택개념으로 작업 한 정보가 저장 되고 다시 작업을 진행할 경우 `git stash pop` 으로 해서 꺼내면 된다.

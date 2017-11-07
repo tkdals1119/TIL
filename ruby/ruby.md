@@ -16,3 +16,15 @@
   - `rendor json: @name`
 
 - rails 에서 보낸 json 객체를 레트로핏이 받을 때 모델의 각 변수의 시리얼라이즈 네임이 동일해야함
+
+- 컨트롤러 생성
+  - `rails g controller 이름`
+
+- 모델 생성
+  - `rails g model 이름`
+
+- DB 갱신
+  - `rake:db migrate`
+
+- if 문
+  - `else if` 가 아니라 `elsif` 이다
