@@ -23,6 +23,8 @@ dependencies {
 - #### content
   - `wrap_content` = 자식 컴포넌트 크기에 맞게 할당 됨
   - `match_content` = 부모 레이아웃의 크기에 맞게 할당 됨
+  - `android:layout_centerInParent="true"` = RelativeLayout 안에서 가운데 정렬
+  - `android:layout_gravity="center"` = LinearLayout 안에서 가운데 정렬
 
 
 
