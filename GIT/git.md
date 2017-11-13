@@ -59,6 +59,14 @@ error: failed to push some refs to '원격저장소 주소' // 원격저장소�
   - 로컬저장소에 브랜치가 존재하지 않을 경우, 즉 master만 있을 경우
      - $ git checkout -b 생성할브랜치이름 // 로컬에 있는 master에 브랜치를 하나 생성한 뒤 push 하면 정상적으로 코드가 업로드 된다
 ```
+
+```
+$ fatal: refusing to merge unrelated histories
+
+- $ git merge beacon --allow-unrelated-histories
+  - 이 명령어로 하면 오류는 해결
+
+```
 ## TIP
 ```
 > fetch && merge && pull의 차이
