@@ -63,7 +63,7 @@ error: failed to push some refs to '원격저장소 주소' // 원격저장소�
 ```
 $ fatal: refusing to merge unrelated histories
 
-- $ git merge beacon --allow-unrelated-histories
+- $ git merge branch-name --allow-unrelated-histories
   - 이 명령어로 하면 오류는 해결
 
 ```
