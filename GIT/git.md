@@ -150,4 +150,4 @@ $ fatal: refusing to merge unrelated histories
 
 - #### 변경 사항을 commit 하지 않고 다른 작업을 하고 싶은 경우
   - 보통 add . 까지만 하고 commit 을 하지 않은 채 다른 브랜치로 이동하려 할 경우 commit 을 하고 이동하라는 메세지가 뜬다
-  - `git stash` 를 하게 되면 일종의 스택개념으로 작업 한 정보가 저장 되고 다시 작업을 진행할 경우 `git stash pop` 으로 해서 꺼내면 된다.
+  - `git stash` 를 하게 되면 일종의 스택개념으로 작업 한 정보가 임시저장 되고 다른 작업 수행. 후에 다시 작업을 진행할 경우 `git stash pop` 으로 해서 임시 저장해둔 내용을 꺼내면 된다.
