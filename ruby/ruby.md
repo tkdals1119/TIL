@@ -22,9 +22,16 @@
 
 - 모델 생성
   - `rails g model 이름`
+    - migration 폴더에 속성 추가(ex: t.string :name)
+      - `rake db:migrate`
 
 - DB 갱신
   - `rake db:migrate`
+
+- 이미 생성되어 있는 모델에 컬럼(속성)추가
+  - `rails g migration AddNewoneToList newone:string`
+  - 'Newone' = 추가할 속성이름, 'List' = 테이블이름
+  - 새로운 파일이 하나 생기는데 거기서 추가하면 됨
 
 - if 문
   - `else if` 가 아니라 `elsif` 이다
