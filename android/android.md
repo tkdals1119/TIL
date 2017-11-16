@@ -52,3 +52,9 @@ dependencies {
 
        startActivity(new Intent(this,MainActivity.class));
        finish;
+
+  - toString() vs String.valueof
+    - toString() 은 null exception이 발생
+    - String.valueof 는 no exception이
+
+  - getText()를 하면 String 이 아니라 Charsequence 이 넘어 가기 때문에 toString 혹은 String.valueof 를 해야함
