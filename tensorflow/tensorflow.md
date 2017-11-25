@@ -16,9 +16,11 @@
  - 노드생성->세션생성->그래프실행
    - 세션을 생성안하고 노드 자체를 출력할 경우 결과값이 아닌 Tensor 값이 나온다
      - 결과값을 출력하기 위해선 **Session** 정의
-  `import tensorflow as tf
-   hello = tf.constant("hello, tensorflow!") // "hello, tensorflow!"라는 텍스트를 가진 hello노드 생성
 
-   sess = tf.Session() // computation 그래프를 실행시키기 위함
-   print(sess.run(hello))
-  `
+ - 가장 기본
+   - `import tensorflow as tf
+      hello = tf.constant("hello, tensorflow!") // "hello, tensorflow!"라는 텍스트를 가진 hello노드 생성
+
+    sess = tf.Session() // computation 그래프를 실행시키기 위함
+    print(sess.run(hello))
+   `
