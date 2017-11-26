@@ -6,6 +6,7 @@
      - 스칼라 : rank=1, 1,2차원Array : rank=2
    - Shape
      - [[1,2,3], [2,3,4], [4,5,6]] = [3,3](shape)
+      - none = 1차원 Array 고 아무값이나 들어올 수 있다
    - Type
      - 대부분은 float32, int32를 많이 씀
 
@@ -42,3 +43,13 @@ hello = tf.constant("hello, tensorflow!") // "hello, tensorflow!"라는 텍스�
 sess = tf.Session() // computation 그래프를 실행시키기 위함
 print(sess.run(hello))
 ```
+  - tf.reduce_maen : 평균 구하는 함수
+  - variable 을 사용했으면 run 할 때 sess.run(tf.global_variables_initializer()) 을 해야함
+
+  - cost 를 최소화 하는 과정
+  ```
+  cost = tf.reduce_mean(tf.square(hypothesis - y_train))
+
+  optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01)
+  train = optimizer.minimize(cost)
+  ```
