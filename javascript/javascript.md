@@ -19,7 +19,7 @@
 
 ### null / undefinded / NAN
   - null : 변수가 정의 되지 않음
-    - Number로 강제 형변환 하면 0 출력
+    - Number로 강제 형변환 하면 **0** 출력
   - undefined : 정의는 해놓았지만 값이 없음. 메모리 주소만 있고 내용물이 없다는 뜻
-    - Number로 강제 형변환 하면 NAN 출력
-  - NAN = not a number, 숫자가 아님 
+    - Number로 강제 형변환 하면 **NAN** 출력
+  - NAN = not a number, 숫자가 아님
