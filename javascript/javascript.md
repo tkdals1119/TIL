@@ -2,7 +2,7 @@
 
 ### 랜덤 정수 출력
   - `var num = Math.floor(Math.random()*(max- min))+min`
-    -  **Math.floor()** 대신 Math.round()를 사용하여 정수화하면 안됨. Math.round()를 사용하면 까지 10까지 나오는 것이 아니라 11까지 나오게 됨
+    -  **Math.round()** 사용하여 정수화하면 안됨. Math.round()를 사용하면 까지 10까지 나오는 것이 아니라 11까지 나오게 됨
 
 ### 배열
   - 선언: `var arr = new Array()`
