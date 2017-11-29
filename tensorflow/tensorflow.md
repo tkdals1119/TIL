@@ -1,4 +1,4 @@
-# tensorflow
+# TENSORFLOW
  - 데이터 플로우 그래프(노드로 이루어짐)를 사용해서 numerical 한 computation 계산을 할 수 있는 라이브러리
 
  - Tensor 는 기본적으로 Array 를 뜻함
