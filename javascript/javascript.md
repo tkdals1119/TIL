@@ -39,3 +39,9 @@
 ### ==, === 차이
   - 1 == "1": true, **with casting**
   - 1 === "1": false, **without casting**
+
+### String 공백 제거
+  - trim(): String 맨앞, 맨뒤 공백만 제거
+  - String 내의 모든 공백 제거
+    - java: str.replaceAll("\\p{Space}", "");
+    - javascript: str.replace( /(\s*)/g, "");
