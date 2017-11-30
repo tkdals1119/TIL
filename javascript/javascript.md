@@ -18,9 +18,9 @@
   - `var arr2 = arr.slice().sort(function(a,b){return a - b}).reduce(function(a,b){if (a.slice(-1)[0] !== b) a.push(b);return a;},[])`
 
 ### null / undefinded / NAN
-  - null : 변수가 정의 되지 않음
+  - null : **ex) var num = null;**
     - Number로 강제 형변환 하면 **0** 출력
-  - undefined : 정의는 해놓았지만 값이 없음. 메모리 주소만 있고 내용물이 없다는 뜻
+  - undefined : 정의는 해놓았지만 값이 없음. 메모리 주소만 있고 내용물이 없다는 뜻 **ex) var num;**
     - Number로 강제 형변환 하면 **NAN** 출력
   - NAN = not a number, 숫자가 아님
 
@@ -31,3 +31,11 @@
     - http프로토콜은 기본적을 클라이언트 쪽에서 request를 보내고 server의 response를 받으면 이어졌던 연결이 끊기게 설계가 되어 있음
     - 페이지 일부분만 업데이트 할 시 굉장히 비효율적
     - XMLHttpRequest 객체를 통해(json이나 xml) 최소한의 필요한 데이터만 받아서 갱신
+
+### 변수의 undefined 체크
+  - `if(object === undefined)` or `if(typeof object == 'undefined')`
+  - typeof : "number", "string", "boolean", "object", "function" 및 "undefined"의 6가지 값을 반환
+
+### ==, === 차이
+  - 1 == "1": true, **with casting**
+  - 1 === "1": false, **without casting**
