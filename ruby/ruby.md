@@ -23,6 +23,7 @@
 - 모델 생성
   - `rails g model 이름`
     - migration 폴더에 속성 추가(ex: t.string :name)
+      - gem 파일에 `gem 'rails_db'`추가
       - `rake db:migrate`
 
 - DB 갱신
