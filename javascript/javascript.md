@@ -23,3 +23,11 @@
   - undefined : 정의는 해놓았지만 값이 없음. 메모리 주소만 있고 내용물이 없다는 뜻
     - Number로 강제 형변환 하면 **NAN** 출력
   - NAN = not a number, 숫자가 아님
+
+### javascript / jquery / ajax
+  - javascript : HTML의 단조로움을 벗어나게 하기 위한 수단 혹은 웹 언어의 근간이 되는 스크립트 언어
+  - jquery : javascript의 사용을 좀 더 쉽게 해주기 위해 생긴 라이브러리
+  - ajax : 비동기 통신을 위한 기술
+    - http프로토콜은 기본적을 클라이언트 쪽에서 request를 보내고 server의 response를 받으면 이어졌던 연결이 끊기게 설계가 되어 있음
+    - 페이지 일부분만 업데이트 할 시 굉장히 비효율적
+    - XMLHttpRequest 객체를 통해(json이나 xml) 최소한의 필요한 데이터만 받아서 갱신
