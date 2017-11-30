@@ -97,6 +97,9 @@ $ fatal: refusing to merge unrelated histories
 - #### 연결 되어 있는 원격저장소 삭제
   - `git remote rm 원격저장소이름(ex:origin)`
 
+- #### Git Repository 이름 변경 후 remote URL 수정
+  - `git remote set-url 원격저장소이름(ex:origin) http:// url 작성`
+
 - #### 브랜치목록
   - `git branch -r` 원격저장소에 있는 브랜치 목록(r=remote)
   - `git branch -a` 로컬저장소에 있는 브랜치 목록
