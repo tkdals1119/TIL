@@ -17,7 +17,7 @@ $ git push origin 브랜치이름 // 생성한 브랜치를 원격저장소에�
 
 > 파일 수정 후
 $ git add . // 수정 된 파일 뿐만 아니라 모든 파일을 포함 (.점이 그 표시)
-$ git commit -m "Message" // 커밋메세지와 함께 커밋
+$ git commit -m "Message" // commit 메세지와 함께 commit
 $ git push origin branch(혹은 마스터) // 원격저장소에 push 할 위치를 정하고 push
 
 
@@ -121,7 +121,7 @@ $ fatal: refusing to merge unrelated histories
 - #### 추가 된 이력 조회
   - `git log --all`
 
-- #### 커밋 로그 확인
+- #### commit 로그 확인
   - `git log`
 
 - #### 원격 저장소에 있는 코드로 로컬 저장소에 있는 코드 갱신
@@ -129,7 +129,7 @@ $ fatal: refusing to merge unrelated histories
 
 - #### 원격저장소에 있는 특정 브랜치를 pull 받을 때
   - `git pull 원격저장소이름(ex:origin) 브랜치이름`
-    - pull 이나 merge 할 때 메세지 적으라고 unix 화면 나올 때가 있는데 그냥 :wq! 하고 나가면됌
+    - pull 이나 merge 할 때 메세지 적으라고 unix 화면 나올 때가 있는데 그냥 :wq! 하고 나가면됨
 
 - #### 다른 브랜치에 있는 변경 내용을 현재 브랜치와 병합
   - `git merge 가져올브랜치`
@@ -143,14 +143,19 @@ $ fatal: refusing to merge unrelated histories
 - #### 현재 코드 상태 & 어떤 파일이 수정 되어 있는지
   - `git status`
 
-- #### 커밋 취소
-  - `git reset HEAD^` 마지막 커밋 삭제
-  - `git reset --hard HEAD` 마지막 커밋 상태로 되돌림
+- #### commit 취소
+  - `git reset HEAD^` 마지막 commit 삭제
+  - `git reset --hard HEAD` 마지막 commit 상태로 되돌림
 
-- #### 특정 커밋 시점으로 돌아가기
-  - `git checkout 커밋id`
-  - 다시 돌아가려면 `git checkout 돌아갈 브랜치 이름` 하면 된다
+- #### 특정 commit 시점으로 돌아가기
+  - `git checkout commit id`
+  - 다시 돌아가려면 `git checkout 돌아갈 브랜치 이름` 하면 됨
 
 - #### 변경 사항을 commit 하지 않고 다른 작업을 하고 싶은 경우
-  - 보통 add . 까지만 하고 commit 을 하지 않은 채 다른 브랜치로 이동하려 할 경우 commit 을 하고 이동하라는 메세지가 뜬다
-  - `git stash` 를 하게 되면 일종의 스택개념으로 작업 한 정보가 임시저장 되고 다른 작업 수행. 후에 다시 작업을 진행할 경우 `git stash pop` 으로 해서 임시 저장해둔 내용을 꺼내면 된다.
+  - 보통 add . 까지만 하고 commit 을 하지 않은 채 다른 브랜치로 이동하려 할 경우 commit 을 하고 이동하라는 메세지가 뜸
+  - `git stash` 를 하게 되면 일종의 스택개념으로 작업 한 정보가 임시저장 되고 다른 작업 수행. 후에 다시 작업을 진행할 경우
+    `git stash pop` 으로 해서 임시 저장해둔 내용을 꺼내면됨
+
+ - commit message 수정
+  - `git commit --amend` 하면 editor 가 나와서 가장 최근의 commit message 를 수정
+  - 과거 commit 의 message 를 수정하려면 수정 할 commit 시점으로 checkout 해서 --amend 하면 됨

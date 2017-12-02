@@ -37,3 +37,13 @@
 
 - if 문
   - `else if` 가 아니라 `elsif` 이다
+
+- substring check
+```
+a = "abcde"
+
+if a.inclue?"bcd"
+  puts "yes"
+else
+  puts "no"
+```

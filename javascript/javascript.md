@@ -45,3 +45,19 @@
   - String 내의 모든 공백 제거
     - java: str.replaceAll("\\p{Space}", "");
     - javascript: str.replace( /(\s*)/g, "");
+
+### 복사 버튼 만들기
+```
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.3/clipboard.min.js"></script> // 이거 추가 하고 해야함
+
+<script>
+window.onload = function(){
+    $(document).ready(function(){
+        var clipboard = new Clipboard('.clipboard');
+    });
+};
+</script>
+
+<input type = "text" id = "copy">
+<button class="clipboard" data-clipboard-target="#copy"> 복사 </button>
+```
