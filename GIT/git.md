@@ -156,6 +156,6 @@ $ fatal: refusing to merge unrelated histories
   - `git stash` 를 하게 되면 일종의 스택개념으로 작업 한 정보가 임시저장 되고 다른 작업 수행. 후에 다시 작업을 진행할 경우
     `git stash pop` 으로 해서 임시 저장해둔 내용을 꺼내면됨
 
- - commit message 수정
+ - #### commit message 수정
   - `git commit --amend` 하면 editor 가 나와서 가장 최근의 commit message 를 수정
   - 과거 commit 의 message 를 수정하려면 수정 할 commit 시점으로 checkout 해서 --amend 하면 됨
