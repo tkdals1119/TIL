@@ -61,3 +61,18 @@ window.onload = function(){
 <input type = "text" id = "copy">
 <button class="clipboard" data-clipboard-target="#copy"> 복사 </button>
 ```
+### URL regular expression
+```
+var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+var regex = new RegExp(expression);
+var t = 'www.google.com';
+
+if (t.match(regex)) {
+  alert("Successful match");
+} else {
+  alert("No match");
+}
+```
+
+### Enter 버튼으로 input submit
+ - <input type=text name=text01 onkeydown = "if(event.keyCode==13) submit();">
