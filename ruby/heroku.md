@@ -83,6 +83,7 @@ end
 ```
 
 ## database.yml 파일 수정
+  - db를 사용하려면 꼭 해야함
 #### 초기 형태
 ```
 # SQLite version 3.x
@@ -151,6 +152,24 @@ production:
 - git init
 - heroku login
 - heroku create
+  - heroku에 Repository(?)가 생성됨. 아마 5개까지 무료
 - git add.
 - git commit -m "blabla"
 - git push heroku master
+  - deploy가 진행됨
+    - 브랜치이름이 master가 아니면 deploy가 안됬음. 아직 이유는 잘 모르겠지만 우선 브랜치이름은 master로!
+- heroku run rake db:migrate
+- 완료
+
+
+## 수정
+- 기본적인 수정법은 git과 동일함
+```
+- git add .
+- git commit -m "message"
+- git push heroku master
+```
+#### db drop
+- heroku pg:reset
+  - bash에 **빨간 글씨** 가 나오는데 그냥 따라서 입력하면 됨
+- heroku run rake db:migrate
