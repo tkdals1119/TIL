@@ -146,3 +146,8 @@ production:
   adapter: postgresql
   encoding: unicode
 ```
+
+## bundle install
+## git init
+## heroku login
+## git add.
