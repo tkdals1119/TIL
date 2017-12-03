@@ -147,7 +147,10 @@ production:
   encoding: unicode
 ```
 
-## bundle install
-## git init
-## heroku login
-## git add.
+- bundle install
+- git init
+- heroku login
+- heroku create
+- git add.
+- git commit -m "blabla"
+- git push heroku master
