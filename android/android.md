@@ -10,6 +10,10 @@ dependencies {
 
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.0' // 이거 꼭해야함. 이거 안해서 하루종일 시간날림
 }
+
+- oncreate 함수에 'ButterKnife.bind(this);' 작성
+
+
 ````
 
 ## 오류
@@ -25,7 +29,6 @@ dependencies {
   - `match_content` = 부모 레이아웃의 크기에 맞게 할당 됨
   - `android:layout_centerInParent="true"` = RelativeLayout 안에서 가운데 정렬
   - `android:layout_gravity="center"` = LinearLayout 안에서 가운데 정렬
-
 
 
 ## java
@@ -58,3 +61,81 @@ dependencies {
     - String.valueof 는 no exception이
 
   - getText()를 하면 String 이 아니라 Charsequence 이 넘어 가기 때문에 toString 혹은 String.valueof 를 해야함
+
+## 버튼 선언
+### 일반적인 버튼 선언
+```
+public class MainActivity extends AppCompatActivity {
+
+    Button button;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_write);
+
+        button=(Button)findViewById(R.id.button);
+        // 몇 개 안되는 버튼 리스너 작성 시 onCreate 안에 직접 작성
+        addbutton.setOnClickListener(new View.OnClickListener() {
+        @Override
+           public void onClick(View view) {
+                Toast.makeText(MapsActivity.this, "클릭했습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+}
+```
+
+```
+public class MainActivity extends AppCompatActivity {
+
+    Button button;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_write);
+
+        button=(Button)findViewById(R.id.button);
+        button2=(Button)findViewById(R.id.button2);
+
+        findViewById(R.id.button).setOnClickListener(mClickListener);
+        findViewById(R.id.button2).setOnClickListener(mClickListener);
+
+    }
+
+    // 버튼이 여러개 있을 때 onCreate 밖에서 리스너 작성
+    Button.OnClickListener mClickListener = new View.OnClickListener() {
+      public void onClick(View v) {
+        switch(v.getId()) {
+          case R.id.button: // button 버튼이 클릭 되었을 때 동작 할 내용
+          break;
+          case R.id.button2: // button2 버튼이 클릭 되었을 때 동작 할 내용
+          break;
+         }
+      }
+   }
+}
+```
+
+
+### 버터나이프 버튼 선언
+```
+public class MainActivity extends AppCompatActivity {
+
+    @BindView(R.id.button) Button button;
+    @OnClick(R.id.button)
+    void OnClickButton2()
+    {
+        Toast.makeText(this, "클릭했습니다.", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_write);
+        ButterKnife.bind(this); // 꼭 써야함
+
+    }
+}
+```
