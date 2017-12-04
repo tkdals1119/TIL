@@ -25,3 +25,7 @@
 ### 프로토콜
    - 어떤 시스템이 다른 시스템과 통신을 원활하게 수용하도록 해주는 통신 규약, 약속
       - ex) TCP/IP(Transmission Control Protocol / Internet Protocol): 컴퓨터와 컴퓨터가 통신 회선 등으로 연결 하기 위한 통신 규약
+
+### RESTful
+   - REpresentational State Transfer
+   - 우리가 URL을 통해 서버에게서 얻는 웹 페이지를 일종의 자원이라고 보았을 때, URI가 자원이 되고 URI에 접근하는 Method(GET, POST, PUT, DELETE)를 바탕으로 자원을 사용하는 자원 기반의 구조를 만드는 것
