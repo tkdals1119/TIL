@@ -150,3 +150,11 @@ findViewById(R.id.addbutton).setOnClickListener(new View.OnClickListener() {
             }
         });
 ```
+
+### EditText
+- 자동 줄바꿈: ` android:scrollHorizontally="false" `
+- 수정 불가(읽기 전용)
+```
+android:clickable="false"
+android:focusable="false"
+```
