@@ -137,3 +137,16 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+
+### 라이브러리 이벤트
+- 예를 들어 버튼 라이브러리를 받아와서 리스너를 붙일 때 실제적으로 버튼은 아니기 때문에 (Button)findViewById 로 바인딩하면 안됨
+- 해당 라이브러리의 id 값으로 바인딩하면 됨
+```
+findViewById(R.id.addbutton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MapsActivity.this, WriteActivity.class);
+                startActivity(intent);
+            }
+        });
+```
