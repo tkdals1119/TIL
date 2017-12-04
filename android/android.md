@@ -135,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write);
         ButterKnife.bind(this); // 꼭 써야함
-
     }
 }
 ```
