@@ -101,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.button).setOnClickListener(mClickListener);
         findViewById(R.id.button2).setOnClickListener(mClickListener);
-
     }
 
     // 버튼이 여러개 있을 때 onCreate 밖에서 리스너 작성
