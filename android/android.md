@@ -175,3 +175,8 @@ android:focusable="false"
     }
 
     ```
+
+### Activity vs AppCompatActivity
+  - 버전 차이
+    - ex) dispatchKeyShortcutEvent() 메소드는 3.0미만의 단말기에서 실행 안됨. 이런 메소드 지원하려고 AppCompatActivity 나옴
+    - ActionBar 역시 3.0 이후에 나온 기능이라 3.0 미만의 단말기에서는 동작할 수 없기 때문에 AppCompatActivity 사용
