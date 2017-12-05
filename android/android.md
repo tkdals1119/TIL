@@ -158,3 +158,20 @@ findViewById(R.id.addbutton).setOnClickListener(new View.OnClickListener() {
 android:clickable="false"
 android:focusable="false"
 ```
+
+### Toolbar
+- 간혹 Toolbar를 선언할 때 **ClassCastException** 오류가 뜨면서 **Toolbar cannot be cast** 라고 나올 때가 있음
+  - Toolbar 선언과 바인딩의 버전 차이를 예상함
+    - 해결:
+    ```
+    android.support.v7.widget.Toolbar toolbar;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_write);
+        toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
+    }
+
+    ```
