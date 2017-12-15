@@ -38,7 +38,7 @@ dependencies {
 ```
   String str1 = "";
   String str2 = null;
-  String st3 = " "
+  String st3 = " ";
 
   if(str1.isEmpty()) -> true
   if(str2.isEmpty()) -> NullException
