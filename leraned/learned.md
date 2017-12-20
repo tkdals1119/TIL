@@ -30,6 +30,41 @@
    - REpresentational State Transfer
    - 우리가 URL을 통해 서버에게서 얻는 웹 페이지를 일종의 자원이라고 보았을 때, URI가 자원이 되고 URI에 접근하는 Method(GET, POST, PUT, DELETE)를 바탕으로 자원을 사용하는 자원 기반의 구조를 만드는 것
 
+### Overloading vs Overriding
+   - Overloading: 같은 이름의 메소드를 여러 개 가지면서 매개변수의 유형과 개수가 다르도록 하는 기술
+   - Overriding: 상위 클래스가 가지고 있는 메소드를 하위 클래스가 재정의 해서 사용
+
+### Call by Value vs Call by Reference
+   - Call by Value: 값에 의한 호출(**java는 항상 call by value**)
+```
+void swap(int a, int b){
+  int tmp = a;
+  a = b;
+  b = tmp;
+}
+int main(int argc, char** argv){
+  int x=10, y=20;
+  swap(x,y);
+  printf("x=%d, y=%d\n", x, y);
+  return;
+}
+==> 10, 20
+```
+   - Call by Reference: 참조에 의한 호출
+```
+void swap(int a, int b){
+  int tmp = a;
+  a = b;
+  b = tmp;
+}
+int main(int argc, char** argv){
+  int x=10, y=20;
+  swap(x,y);
+  printf("x=%d, y=%d\n", x, y);
+  return;
+}
+==> 20, 10
+```
 ### Vector vs ArrayList vs Linkedlist vs map
    - Vector: **동적 배열** 로써 미리 일정크기의 메모리를 할당해 놓고 그 이상의 값들이 추가되면 새로운 더 큰 메모리를 할당함
       - 장점: 어떤 종류의 객체도 담을 수 있음. 대용량의 데이터를 효과적으로 다룰 수 있음.
