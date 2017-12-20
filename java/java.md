@@ -61,3 +61,10 @@
 
   - boolean -> Integer
     - `int i = (b)? 1 : 0;`
+
+- ### 랜덤 숫자 출력
+  - `Random random = new Random();`
+    - `int a = random.nextInt(범위)`
+  - `double random2 = Math.random()`
+    - `int a = (int)(random2*100)+10`
+      - ex: 100=max, 10=min  
