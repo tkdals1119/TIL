@@ -22,7 +22,7 @@
   if(str1==null) -> false
   if(str2==null) -> true
 ```
- - equals 와 == 의 차이
+ - ### equals 와 == 의 차이
    - equals: 두 객체가 담고 있는 내용을 비교
    - ==: 두 객체를 비교(같은 객체를 참고하고 있는지)
 ```
