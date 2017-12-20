@@ -52,10 +52,10 @@ int main(int argc, char** argv){
 ```
    - Call by Reference: 참조에 의한 호출
 ```
-void swap(int a, int b){
-  int tmp = a;
-  a = b;
-  b = tmp;
+void swap(int* a, int* b){
+  int tmp = *a;
+  *a = *b;
+  *b = tmp;
 }
 int main(int argc, char** argv){
   int x=10, y=20;
