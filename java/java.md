@@ -68,3 +68,6 @@
   - `double random2 = Math.random()`
     - `int a = (int)(random2*100)+10`
       - ex: 100=max, 10=min  
+
+- ### hasNextLine()
+  - 다음 행이 존재하는지 판별하여 true / false 반환
