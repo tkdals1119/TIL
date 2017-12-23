@@ -29,34 +29,47 @@ dependencies {
   - `android:layout_centerInParent="true"` = RelativeLayout 안에서 가운데 정렬
   - `android:layout_gravity="center"` = LinearLayout 안에서 가운데 정렬
 
-
- - 액티비티 이동
-   - `Intent i = new Intent(현재액티비티.this, 이동할액티비티.class);
-      startActivity(i);`
-
- - 타이틀바 삭제
+ - #### 타이틀바 삭제
    - `android:theme="@style/Theme.AppCompat.NoActionBar`
 
- - 스플래시 설정
-   - manifest 파일에서 <intent-filter> 위에 스플래시로 사용할 액티비티 선언
+ - #### EditText
+   - 자동 줄바꿈: ` android:scrollHorizontally="false" `
+   - 수정 불가(읽기 전용)
+   ```
+   android:clickable="false"
+   android:focusable="false"
+   ```
+   - getText()를 하면 String 이 아니라 Charsequence 이 넘어 가기 때문에 toString 혹은 String.valueof 를 해야함
+
+  - #### ImageButton
+    - ImageButton 배경 투명: `android:background="@android:color/transparent"`
+
+
+## java
+### 스플래시 설정
+  - manifest 파일에서 <intent-filter> 위에 스플래시로 사용할 액티비티 선언   
      - 스플래시로 사용할 액티비티에 초 설정하는 코드 추가
-       - try{
-         Thread.sleep(4000);
-       }
-       catch (InterruptedException e) {
-         e.printStackTrace();
-       }
+```
+try{
+  Thread.sleep(4000);
+}
+catch (InterruptedException e) {
+  e.printStackTrace();
+}
 
-       startActivity(new Intent(this,MainActivity.class));
-       finish;
+startActivity(new Intent(this,MainActivity.class));
+finish;
+```
 
-  - toString() vs String.valueof
-    - toString() 은 null exception이 발생
-    - String.valueof 는 no exception이
+### 액티비티 이동
+```
+Intent i = new Intent(현재액티비티.this, 이동할액티비티.class);
+startActivity(i);
+```
+### toString() vs String.valueof
+  - toString() 은 null exception이 발생
+  - String.valueof 는 no exception이 발생
 
-  - getText()를 하면 String 이 아니라 Charsequence 이 넘어 가기 때문에 toString 혹은 String.valueof 를 해야함
-
-## 버튼 선언
 ### 일반적인 버튼 선언
 ```
 public class MainActivity extends AppCompatActivity {
@@ -145,13 +158,7 @@ findViewById(R.id.addbutton).setOnClickListener(new View.OnClickListener() {
         });
 ```
 
-### EditText
-- 자동 줄바꿈: ` android:scrollHorizontally="false" `
-- 수정 불가(읽기 전용)
-```
-android:clickable="false"
-android:focusable="false"
-```
+
 
 ### Toolbar
 - 간혹 Toolbar를 선언할 때 **ClassCastException** 오류가 뜨면서 **Toolbar cannot be cast** 라고 나올 때가 있음
@@ -167,7 +174,6 @@ android:focusable="false"
         toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
     }
-
     ```
 
 ### Activity vs AppCompatActivity
