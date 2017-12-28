@@ -1,3 +1,7 @@
+### 절차지향 vs 객체지향
+  - 절차지향: 물이 위에서 아래로 흐르는 것처럼 순차적인 처리가 중요시 되며 프로그램 전체가 유기적으로 연결되도록 만드는 프로그래밍 기법.
+  - 객체지향: 정의를 살펴보면 객체지향이란 실제 세계를 모델링하여 소프트웨어를 개발하는 방법.
+    - 특성: 캡슐회, 상속, 다형성
 ### URL 과 URI 의 차이
   - URI(Uniform Resource Identifier): 주소가 가리키는게 자원임(Apache, Tomcat 등)
     - URI = URL + URN(Uniform Resource Name)
