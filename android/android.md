@@ -159,7 +159,6 @@ findViewById(R.id.addbutton).setOnClickListener(new View.OnClickListener() {
 ```
 
 
-
 ### Toolbar
 - 간혹 Toolbar를 선언할 때 **ClassCastException** 오류가 뜨면서 **Toolbar cannot be cast** 라고 나올 때가 있음
   - Toolbar 선언과 바인딩의 버전 차이를 예상함
@@ -175,8 +174,18 @@ findViewById(R.id.addbutton).setOnClickListener(new View.OnClickListener() {
         setSupportActionBar(toolbar);
     }
     ```
-
 ### Activity vs AppCompatActivity
   - 버전 차이
     - ex) dispatchKeyShortcutEvent() 메소드는 3.0미만의 단말기에서 실행 안됨. 이런 메소드 지원하려고 AppCompatActivity 나옴
     - ActionBar 역시 3.0 이후에 나온 기능이라 3.0 미만의 단말기에서는 동작할 수 없기 때문에 AppCompatActivity 사용
+
+### URI를 이용해 ImageView에 바로 이미지 넣기
+```
+Uri uri = data.getData();
+				try {
+					Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+					imageView.setImageBitmap(bitmap);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+```
