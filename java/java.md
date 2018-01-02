@@ -71,3 +71,34 @@
 
 - ### hasNextLine()
   - 다음 행이 존재하는지 판별하여 true / false 반환
+
+- ### next() vs nextLine()
+  - next(): 문자 또는 문자열을 공백을 기준으로 한 단어 또는 한 문자씩 입력 받음
+    - ex: "hello world" 입력 시 **hello** 출력. 공백을 기준으로 하기 때문.
+  - nextLine(): 문자 또는 문장 한 라인 전체를 입력 받음
+    - ex: "hello world" 입력 시 **hello world** 출력
+
+
+- ### charAt(인수), indexOf(문자), substring(인수, 인수), length()
+  - charAt(인수): 인수 번째의 문자를 읽음
+    - ex: "abcde".charAt(1) -> **b**
+    - ex: "12345".charAt(2)-'0' -> **3**
+      - **-'0'** 은 int를 반환함
+
+  - indexOf(문자)
+    - 해당 문자가 들어있는 위치를 반환함(문자가 없으면 **-1** 를 반환)
+      - ex: "abcde".indexOf("e") -> **4**
+
+  - substring(인수, 인수)
+    - charAt은 문자하나를 읽지만 substring은 문자열을 읽음
+      - ex: "abcde".substring(1, 3) -> **bc**
+
+  - length()
+    - 인수의 길이를 반환
+      - ex:
+```
+String str="abcd";
+int i=str.length();
+System.out.println(i);
+--> 4
+```
