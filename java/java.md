@@ -96,9 +96,9 @@
   - length()
     - 인수의 길이를 반환
       - ex:
-```
-String str="abcd";
-int i=str.length();
-System.out.println(i);
---> 4
-```
+          ```
+          String str="abcd";
+          int i=str.length();
+          System.out.println(i);
+          --> 4
+          ```

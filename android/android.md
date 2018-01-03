@@ -174,6 +174,82 @@ findViewById(R.id.addbutton).setOnClickListener(new View.OnClickListener() {
         setSupportActionBar(toolbar);
     }
     ```
+### Toolbar icon 추가하기
+ - 1. 기존의 ActionBar 삭제
+   - **res/values/styles.xml** 에서 Style태그의 parent속성 값을 **Theme.AppCompat.Light.NoActionBar** 으로 바꿈
+ - 2. Toolbar 추가
+   - activity_main.xml
+   ```
+   <android.support.v7.widget.Toolbar
+       android:id="@+id/my_toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="?attr/colorPrimary"
+       android:elevation="4dp"
+       android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+       app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+   ```
+   - MainActivity.java
+   ```
+   Toolbar myToolbar;
+       @Override
+       protected void onCreate(Bundle savedInstanceState) {
+           super.onCreate(savedInstanceState);
+           setContentView(R.layout.activity_main);
+           // 추가된 소스, Toolbar를 생성한다.
+           myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+           setSupportActionBar(myToolbar);
+       }
+   ```
+ - 3. Toolbar icon 추가
+    - **res/menu/menu.xml** (꼭 이름을 **menu** 로 해야함)
+    ```
+    <?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+        <!-- "Mark Favorite", should appear as action button if possible -->
+        <item
+            android:id="@+id/action_settings"
+            android:title="환경설정"
+            android:icon="@drawable/ic_settings_black_24dp"
+            app:showAsAction="ifRoom"/>
+        <!-- Settings, should always be in the overflow -->
+        <item android:id="@+id/action_settings2"
+            android:title="항목1"
+            app:showAsAction="never"/>
+        <item android:id="@+id/action_settings3"
+            android:title="항목2"
+            app:showAsAction="never"/>
+    </menu>
+    ```
+
+    - MainActivity.java
+    ```
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //return super.onCreateOptionsMenu(menu);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        //return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                // User chose the "Settings" item, show the app settings UI...
+                Toast.makeText(getApplicationContext(), "환경설정 버튼 클릭됨", Toast.LENGTH_LONG).show();
+                return true;
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                Toast.makeText(getApplicationContext(), "나머지 버튼 클릭됨", Toast.LENGTH_LONG).show();
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    ```
+
 ### Activity vs AppCompatActivity
   - 버전 차이
     - ex) dispatchKeyShortcutEvent() 메소드는 3.0미만의 단말기에서 실행 안됨. 이런 메소드 지원하려고 AppCompatActivity 나옴
