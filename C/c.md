@@ -1,9 +1,16 @@
 # C
-```
-> 가변 배열 만들기
- - int *arr;
- - arr = (int*)malloc(sizeof(int)*크기);
-```
+
+- 가변 배열 만들기
+  ```
+  int *arr;
+  arr = (int*)malloc(sizeof(int)*크기);
+  ```
+- 배열 크기, 길이
+  - 크기: sizeof(arr)
+    - ex: int arr[3]일 때 4바이트가 3개 있으므로 12출력
+  - 길이: sizeof(arr)/sizeof(int)  
+    - ex: int arr[3]일 때 3출력
+
 
 ## 알고리즘
 ```
