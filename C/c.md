@@ -11,6 +11,15 @@
   - 길이: sizeof(arr)/sizeof(int)  
     - ex: int arr[3]일 때 3출력
 
+ - C언어는 자료형이 엄격하기 때문에 정수 나눗셈에서 소수점까지 출력하고 싶다면
+ ```
+ int a = 1;
+ int b = 5;
+
+ printf("%.2f", (double)a/(double)b); --> int형을 double로 캐스팅 한 후 나눗셈을 해야함(.2는 소수점 두번째 자리 까지 출력)
+
+ ```
+
 
 ## 알고리즘
 ```

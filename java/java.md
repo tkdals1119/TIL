@@ -46,6 +46,10 @@
     - `String str = Integer.toString(i);`
     - `String str = "" + i;`
 
+  - int -> double
+    - `int a=10;`
+    - `double d = (double)a;`
+
   - String -> int
     - `int i = Integer.parserInt(str);`
     - `int i = Integer.valueOf(str).intValue();`
