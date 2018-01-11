@@ -49,3 +49,7 @@
   - scanf 오류
     - 블라블라 **'scanf' 선언을 참조하십시오.** 라고 빌드 실패가 나올 경우
       - 상단 `#include <stdio.h>` 위에 `#define _CRT_SECURE_NO_WARNINGS` 라고 선언하면 해결
+
+### 단축키
+   - 주석달기 = CTRL + K + C
+   - 주석해지 = CTRL + K + U
