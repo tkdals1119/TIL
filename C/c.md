@@ -25,6 +25,9 @@
    - `printf("%%%%\n");` => 퍼센트 기호 2개 출력하기
    - `printf("%%%%%%\n");` => 퍼센트 기호 3개 출력하기
 
+  - 전역변수
+    - 전역변수는 따로 값을 지정하지 않고 선언하면 0으로 자동 초기화
+
 
 
 ## 알고리즘
@@ -49,6 +52,9 @@
   - scanf 오류
     - 블라블라 **'scanf' 선언을 참조하십시오.** 라고 빌드 실패가 나올 경우
       - 상단 `#include <stdio.h>` 위에 `#define _CRT_SECURE_NO_WARNINGS` 라고 선언하면 해결
+
+  - `Run-Time Check Failure #2 – Stack around the variable ‘변수이름’ was corrupted.`
+    - 사용자가 설정한 배열의 크기보다 더 큰것을 넣을려고 할때  위와 같은 에러가 발생
 
 ### 단축키
    - 주석달기 = CTRL + K + C
