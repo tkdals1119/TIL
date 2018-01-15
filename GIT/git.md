@@ -124,6 +124,9 @@ $ fatal: refusing to merge unrelated histories
 - #### commit 로그 확인
   - `git log`
 
+- #### commit 합치기
+  - `git rebase -i HEAD~4` (최신 4개의 커밋을 하나로 합치기)
+
 - #### 원격 저장소에 있는 코드로 로컬 저장소에 있는 코드 갱신
   - `git pull`
 

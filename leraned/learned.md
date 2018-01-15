@@ -6,7 +6,7 @@
   - URI(Uniform Resource Identifier): 주소가 가리키는게 자원임(Apache, Tomcat 등)
     - URI = URL + URN(Uniform Resource Name)
   - URL(Uniform Resource Locator): 주소가 가리키는게 파일임
-    - 모든 URL은 URI 이다.
+    - 모든 URL은 URI 임.
 
 ### http 와 https 의 차이
    - http: HyperText Transfer Protocol
