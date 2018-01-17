@@ -32,6 +32,10 @@
     - `scanf("%s", arr);`
       - 공백이 있으면 입력을 멈춤
 
+  - #### 문자열 길이
+    - `str = strlen(arr);`
+      - 'strlen'를 사용하려면 `#include <string.h>` 선언
+
     - 공백이 포함된 문자열 입력
       - `scanf("%[^\n]", arr);`
       - `fgets(str_read, 100, stdin);`
@@ -44,7 +48,6 @@
       - ch = 변환 된 문자열이 저장 될 배열
       - "%d" = 변환 할 데이터 타입
       - num = 변환 할 숫자가 담겨있는 변수
-        - 'sprintf'를 사용하려면 `#include <string.h>` 선언 되있어야 함
 
   - #### int->char, char->int
     - int->char: '0'을 더함
@@ -61,7 +64,6 @@
             char c;
             c = a-'0';
             ```
-
 ## 알고리즘
 ```
 > 그리드 알고리즘(탐욕 알고리즘, 욕심쟁이 알고리즘)
