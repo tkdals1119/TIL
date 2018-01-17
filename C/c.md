@@ -31,17 +31,16 @@
   - #### 문자열 입력
     - `scanf("%s", arr);`
       - 공백이 있으면 입력을 멈춤
-
-  - #### 문자열 길이
-    - `str = strlen(arr);`
-      - 'strlen'를 사용하려면 `#include <string.h>` 선언
-
     - 공백이 포함된 문자열 입력
       - `scanf("%[^\n]", arr);`
       - `fgets(str_read, 100, stdin);`
         - str_read = 문자열이 저장되는곳
         - 100 = 크기. 즉 최대 99개의 문자를 저장
         - stdin = 표준입력
+
+  - #### 문자열 길이
+    - `str = strlen(arr);`
+      - 'strlen'를 사용하려면 `#include <string.h>` 선언
 
   - #### int -> 문자열
     - `sprintf(ch, "%d", num);`
