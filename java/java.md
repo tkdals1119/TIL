@@ -85,6 +85,7 @@
 
 - ### charAt(인수), indexOf(문자), substring(인수, 인수), length()
   - charAt(인수): 인수 번째의 문자를 읽음
+    - 문자열에 한글자씩 접근하고자 할 때 CharAt 사용
     - ex: "abcde".charAt(1) -> **b**
     - ex: "12345".charAt(2)-'0' -> **3**
       - **-'0'** 은 int를 반환함
