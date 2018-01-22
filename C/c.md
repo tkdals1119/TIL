@@ -100,3 +100,19 @@
 ### 단축키
    - 주석달기 = CTRL + K + C
    - 주석해지 = CTRL + K + U
+
+
+```
+int asc[8]={0}int des[8]={0}int client[8]={0}
+for(i=0; i<8; i++){ asc[i]=i+1; des[i]=8-i;}
+scanf("%s", client);
+for(i=0; i<8; i++){  if(client[i]-'0' == asc[i]) {count_asc++;}
+  else if(client[i]-'0' == des[i] {count_des++;}} 
+if(count_asc==8) printf("ascending");else if(count_des==8) printf("descending");
+return 0;
+
+int arr[5]={0}int sum=0;for(i=0; i<5; i++){ scanf("%d", &arr[i]);
+ if(arr[i]<40) {arr[i]=40;} sum+=arr[i];}
+printf("%d", sum/5);
+
+```
