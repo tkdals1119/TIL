@@ -82,6 +82,13 @@
   - nextLine(): 문자 또는 문장 한 라인 전체를 입력 받음
     - ex: "hello world" 입력 시 **hello world** 출력
 
+- ### toCharArray
+  - ex: `char ch[] = str.toCharArray();`
+  - 문자열을 배열로 저장
+
+- ### toLowerCase
+  - ex: `str = str.toLowerCase();`
+  - 문자열에 있는 문자를 모두 소문자로 변환
 
 - ### charAt(인수), indexOf(문자), substring(인수, 인수), length()
   - charAt(인수): 인수 번째의 문자를 읽음
