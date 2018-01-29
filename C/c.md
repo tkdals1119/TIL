@@ -83,6 +83,8 @@ printf("%c", ch[3]);
             int a;
             a = c -'0';
             ```
+    - #### 소문자알파벳 - 'a'
+      - 해당 알파벳이 몇 번째 알파벳인지 나타냄
 
 ## 알고리즘
 ```
@@ -109,6 +111,8 @@ printf("%c", ch[3]);
 
   - `Run-Time Check Failure #2 – Stack around the variable ‘변수이름’ was corrupted.`
     - 사용자가 설정한 배열의 크기보다 더 큰것을 넣을려고 할때  위와 같은 에러가 발생
+
+  - `The left-hand side of an assignment be a variable` => 말 그대로 왼쪽의 변수는 변동되어서는 안된다는 말
 
 ### 단축키
    - 주석달기 = CTRL + K + C
