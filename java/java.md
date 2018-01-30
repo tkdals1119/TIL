@@ -81,6 +81,8 @@
     - ex: "hello world" 입력 시 **hello** 출력. 공백을 기준으로 하기 때문.
   - nextLine(): 문자 또는 문장 한 라인 전체를 입력 받음
     - ex: "hello world" 입력 시 **hello world** 출력
+  - 숫자 두 개를 공백 기준으로 한 줄에 입력할 시
+    - ex: `str1 = sc.next(); str2 = sc.next();`
 
 - ### toCharArray
   - ex: `char ch[] = str.toCharArray();`
