@@ -46,6 +46,10 @@
     - `String str = Integer.toString(i);`
     - `String str = "" + i;`
 
+  - char -> int
+    - `char ch = '9';`
+    - `int num = ch-'0';`
+
   - int -> double
     - `int a=10;`
     - `double d = (double)a;`
