@@ -5,11 +5,14 @@
   int *arr;
   arr = (int*)malloc(sizeof(int)*크기);
   ```
-- #### 배열 크기, 길이
+- #### int 배열 크기, 길이
   - 크기: sizeof(arr)
     - ex: int arr[3]일 때 4바이트가 3개 있으므로 12출력
   - 길이: sizeof(arr)/sizeof(int)  
     - ex: int arr[3]일 때 3출력
+
+- #### char 배열 크기, 길이
+  - 크기: sizeof(arr)
 
  - #### C언어는 자료형이 엄격하기 때문에 정수 나눗셈에서 소수점까지 출력하고 싶다면
  ```
@@ -58,9 +61,16 @@ printf("%c", ch[3]);
       - str1이 더 크면 양수 반환
       - str2이 더 크면 음수 반환
 
+  - #### 문자열 배열과 null 문자
+    - `char ch[] = "hello coding !"` => 실제길이 14
+    - `str = sizeof(ch)` => **15** 리턴
+    - 배열을 선언할 때 크기를 지정하지 않으면 마지막 배열에 `'\0'` 가 삽입됌
+
   - #### 문자열 길이
     - `str = strlen(arr);`
       - 'strlen'를 사용하려면 `#include <string.h>` 선언
+    - `char ch[100]="code code"`
+      - `str = strlen(ch)` 하면 **100** 이 리턴되는것이 아니라 9개의 문자로 이루어져 있으므로 **9** 리턴
 
   - #### int -> 문자열
     - `sprintf(ch, "%d", num);`
@@ -85,6 +95,9 @@ printf("%c", ch[3]);
             ```
     - #### 소문자알파벳 - 'a'
       - 해당 알파벳이 몇 번째 알파벳인지 나타냄
+
+    - #### bool
+      - bool 타입을 사용하려면 `#include <stdbool.h>` 선언을 해야함
 
 ## 알고리즘
 ```

@@ -77,6 +77,8 @@
     - `int a = (int)(random2*100)+10`
       - ex: 100=max, 10=min  
 
+- ### 배열 초기화
+  - `Arrays.fill(배열이름, 숫자/true/false);`
 - ### hasNextLine()
   - 다음 행이 존재하는지 판별하여 true / false 반환
 
