@@ -94,6 +94,10 @@
   - ex: `char ch[] = str.toCharArray();`
   - 문자열을 배열로 저장
 
+- ### 문자열에서 특정 문자열 검색
+  - `str.matches(".*블라블라.*")`
+  - 대소문자 구분없이 검색 ``str.matches("(?!).*블라블라.*")``
+  
 - ### toLowerCase
   - ex: `str = str.toLowerCase();`
   - 문자열에 있는 문자를 모두 소문자로 변환
