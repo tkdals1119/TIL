@@ -79,6 +79,10 @@
 
 - ### 배열 초기화
   - `Arrays.fill(배열이름, 숫자/true/false);`
+
+- ### 배열 정렬
+  - 오름차순: `Arrays.sort(배열이름)`
+  - 내림차순: 오름차순으로 정렬 한 뒤 reverse `Arrays.sort(배열이름); reverseArrayInt(배열이름);`
 - ### hasNextLine()
   - 다음 행이 존재하는지 판별하여 true / false 반환
 
@@ -97,7 +101,7 @@
 - ### 문자열에서 특정 문자열 검색
   - `str.matches(".*블라블라.*")`
   - 대소문자 구분없이 검색 ``str.matches("(?!).*블라블라.*")``
-  
+
 - ### toLowerCase
   - ex: `str = str.toLowerCase();`
   - 문자열에 있는 문자를 모두 소문자로 변환
