@@ -80,7 +80,7 @@
 - ## 전역변수
   - 전역변수는 따로 값을 지정하지 않고 선언하면 0으로 자동 초기화
 
-- ## int->char, char->int
+- ## int->char
   - int->char: '0'을 더함
     - ex):
 ```
@@ -88,6 +88,7 @@ int a = 5;
 char c;
 c = a+'0';
 ```
+ - ## char->int
    - char->int: '0'을 뺌
      - ex):
 ```
