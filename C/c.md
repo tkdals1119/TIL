@@ -19,7 +19,7 @@
     - `scanf("%s", arr);`
     - 공백이 있으면 입력을 멈춤
 
-  - ###공백이 포함된 문자열 입력
+  - ### 공백이 포함된 문자열 입력
     - `scanf("%[^\n]", arr);`
     - `fgets(str_read, 100, stdin);`
       - str_read = 문자열이 저장되는곳
@@ -83,18 +83,18 @@
 - ## int->char, char->int
   - int->char: '0'을 더함
     - ex):
-            ```
-            int a = 5;
-            char c;
-            c = a+'0';
-            ```
+```
+int a = 5;
+char c;
+c = a+'0';
+```
   - char->int: '0'을 뺌
     - ex):
-            ```
-            char c = '5';
-            int a;
-            a = c -'0';
-            ```
+```
+char c = '5';
+int a;
+a = c -'0';
+```
 - ## 대소문자알파벳 - 'a' or 'A'
   - 해당 알파벳이 몇 번째 알파벳인지 나타냄
 
