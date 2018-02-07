@@ -88,8 +88,8 @@ int a = 5;
 char c;
 c = a+'0';
 ```
-  - char->int: '0'을 뺌
-    - ex):
+   - char->int: '0'을 뺌
+     - ex):
 ```
 char c = '5';
 int a;
