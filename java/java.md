@@ -95,12 +95,27 @@
    str1.equals(str2)-> true
    str1==str2 -> true
  ```
-- ## 문자열 포함여부 확인
-  - contains: `str.contains("asdf")` => true/false 리턴
-  - indexOf: `str.indexof("asdf")` => 찾고자 하는 문자열의 시작 인덱스 리턴
-  - matches
-    - `str.matches(".*asdf.*")` => true/false 리턴
-    - 정규 표현식으로 문자열에 숫자가 포함되어 있는지 확인 `str.matches(".*[0-9].*")` => true/false 리턴
+  - ### 문자열 포함여부 확인
+    - contains: `str.contains("asdf")` => true/false 리턴
+    - indexOf: `str.indexof("asdf")` => 찾고자 하는 문자열의 시작 인덱스 리턴
+    - matches
+      - `str.matches(".*asdf.*")` => true/false 리턴
+      - 정규 표현식으로 문자열에 숫자가 포함되어 있는지 확인 `str.matches(".*[0-9].*")` => true/false 리턴
+
+    - 문자열에서 동일한 특정 문자열의 개수 확인
+```
+Pattern pattern = Pattern.compile(찾고자 하는 특정 문자열);
+Matcher matcher = pattern.matcher(전체문자열);
+			while(matcher.find())
+			{
+				count++;
+			}
+```
+  - ### 문자열 대체
+    - 문자열에 있는 특정 문자열 모두 지우기
+      - `str = str.replaceAll("지울 특정 문자열", "")`
+    - 문자열에 있는 특정 문자열 중 첫번째만 지우기
+      - `str = str.replaceFirst("지울 특정 문자열", "")`
 
 - ## charAt(인수), indexOf(문자), substring(인수, 인수), length()
   - charAt(인수): 인수 번째의 문자를 읽음
