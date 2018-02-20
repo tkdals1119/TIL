@@ -58,5 +58,54 @@ End Sub
 --> '&' 기호로 문자를 연결함. A1에 있는 내용을 다이얼로그로 띄움
 Sub 글자연결하기()
   a = Range("A1").Value
-  MsgBox = ("나는" & a & "이다.")
+  MsgBox("나는" & a & "이다.")
+```
+
+## 여러 셀에 동일 값 추가
+```
+Sub test()
+  For cycle = 1 To 100
+    Cells(1,cycle).Select
+    Selection.Value = 100
+  Next
+End Sub
+```
+
+## 조건문
+```
+Sub test()
+  사원명 = Range("a2").Value
+  If 사원명 = "홍길동" Then
+    MsgBox("맞습니다.")
+  Else
+    MsgBox("아닙니다.")
+  End If
+End Sub
+```
+
+## Method
+ - 현재 시간을 출력하는 메소드:`DateTime.Now`
+ - 랜덤 메소드: `Int(Rnd()*10)+1`
+ - 행 개수: `Range("a1", Range("a1").End(xlDown)).Rows.Count`
+ - 열 개수: `Range("a1", Range("a1").End(xlToRight)).Columns.Count`
+ 
+## parameter
+```
+Sub printhello(p_name)
+  MsgBox(p_name)
+End Sub
+
+Sub test_printhello()
+  Call printhello("홍길동")
+End Sub
+```
+
+## 다른 sheet 로 데이터 복사
+```
+Sheets("Sheet2").Range("a2:a5").Value = Sheets("Sheet1").Range("a2:a5").Value
+```
+
+## Address
+```
+Range("a2").Value = Range("a1").Address
 ```

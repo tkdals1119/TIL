@@ -2,6 +2,7 @@
 - ## 동적 할당
   - c: (int*)malloc(sizeof(int*)배열이름)
   - c++: 간단하게 new 로 하면 됌(new와 delete는 c++ 기본 연산자이므로 헤더파일을 추가하지 않아도 됌)
+    - `int *arr = new int[num]`
 
 - ## 헤더파일
   - ### `#include <algorithm>`
