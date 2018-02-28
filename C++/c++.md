@@ -2,7 +2,7 @@
 - ## 동적 할당
   - c: (int*)malloc(sizeof(int*)배열이름)
   - c++: 간단하게 new 로 하면 됌(new와 delete는 c++ 기본 연산자이므로 헤더파일을 추가하지 않아도 됌)
-    - `int *arr = new int[num]`
+    - `int *arr = new int[size]`(int형 size크기의 배열을 할당해서 그 주소를 arr에게 넘겨줌)
 
 - ## 헤더파일
   - ### `#include <algorithm>`
@@ -11,7 +11,38 @@
 - ## c++ 에서 printf를 사용하여 string 출력
   - `printf("%s\n", string.c_str())`
 
+- ## 배열
+  - 정적할당: Stack // 동적할당: Heap
+  - 1차 가변 배열 선언
+```
+int *arr;
+arr = new int[num];
+```
+  - 2차 가변 배열 선언
+```
+/*메모리 할당*/
+int **arr = new int*[Y];
+for (i = 0; i < Y; ++i)
+{
+  arr[i] = new int[X];
+  memset(arr[i], 0, sizeof(int) * X);
+}
 
+/*메모리 해제*/
+for (i = 0; i < Y; ++i)
+{
+  delete [] arr;
+}
+delete [] arr;
+```
+  - 2차 가변 배열 파라미터 전달
+```
+void cal(int **arr) {}
+int main()
+{
+  cal(arr);
+}
+```
 
 - ## Tips
   - const: 변수의 값이 상수임을 지정하고 프로그래머가 이 변수를 수정하지 못하게 함
@@ -21,7 +52,7 @@
     - 컴파일러가 함수 원형을 근거로 데이터형을 비교함으로써 에러를 검출
     - 함수 원형이 함수로 인한 에러를 만들 확률을 낮춤
 
-- Error
+- ## Error
   - `'test' 식별자를 찾을 수 없습니다.` 라고 간혹 에러가 뜨곤 한다.
     - 해결1) **test()** 함수를 상단에 함수 원형으로 선언
     - 해결2) **test()** 함수를 호출하는 함수보다 **test()** 함수를 먼저 작성
