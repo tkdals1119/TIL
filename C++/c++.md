@@ -3,8 +3,8 @@
 * [헤더파일](#헤더파일)
 * [배열](#배열)
 * [문자열](#문자열)
-* [Tips](#Tips)
-* [Error](#Error)
+* [팁](#팁)
+* [에러](#에러)
 
 - ## 동적할당
   - c: (int*)malloc(sizeof(int*)배열이름)
@@ -131,7 +131,7 @@ string myString = “55”;
 int myInt ;
 myInt = stoi(myString);
 ```
-- ## Tips
+- ## 팁
   - ### const: 변수의 값이 상수임을 지정하고 프로그래머가 이 변수를 수정하지 못하게 함
 
   - ### 함수 원형을 선언하는 이유
@@ -142,7 +142,7 @@ myInt = stoi(myString);
   - ### c++ 에서 printf를 사용하여 string 출력
     - `printf("%s\n", string.c_str())`
 
-- ## Error
+- ## 에러
   - `'test' 식별자를 찾을 수 없습니다.` 라고 간혹 에러가 뜨곤 한다.
     - 해결1) **test()** 함수를 상단에 함수 원형으로 선언
     - 해결2) **test()** 함수를 호출하는 함수보다 **test()** 함수를 먼저 작성
