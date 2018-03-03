@@ -43,6 +43,90 @@ int main()
   cal(arr);
 }
 ```
+  - 배열 크기
+    - int 배열
+      - `sizeof(arr)/sieof(int)`
+    - char 배열
+      - `sizeof(arr)`
+    - **중요**
+      - ### 동적 할당 받은 배열의 크기 구하기
+      - `sizeof` 그 값을 컴파일 이전에 얻어 내는데 동적 메모리 할당은 컴파일 이후에 메모리를 할당하므로 **포인터의 크기인 4를 반환**
+      - 동적메모리 할당을 받은 배열의 크기: **`_msize((void*)배열이름)` or `_msize((void*)arr)/sizeof(int)`**
+
+- string
+  - 문자열 확장
+    - `str = str + "abc";`
+    - `str.append("abc");`
+
+  - 문자열 길이
+    - `str.size()`
+    - `str.length()`
+
+  - 문자열 길이2
+    - `str.capacity()` => str 이 갖고 있는 길이 반환
+    - `str.max_size()` => str 이 최대로 갖을 수 있는 길이 반환
+
+  - 문자열의 문자 접근
+    - `str.at(0)` => java의 **charAt** 기능과 동일함
+
+  - 문자열 검색
+    - `str.find("abc")` => "abc" 라는 문자열이 시작되는 위치 반환
+```
+if(str.find("abc"!=string::npos))
+{
+  // "abc"라는 문자열을 찾았을 때의 동작
+}
+```
+    - => string::find() 함수는 찾는 단어나 문자열이 없으면 **string::npos** 를 리턴
+
+  - 문자열 비교
+```
+if (myString.compare(myString2) == 0)
+{
+  // 두 문자열이 완전히 같은 문자열일때의 처리
+}
+
+else if (myString.compare(myString2) < 0)
+{
+  // myString의 문자열이 myString2보다 사전순으로 앞일 때 처리
+}
+
+else if (myString.compare(myString2) > 0)
+{
+  // myString의 문자열이 myString2보다 사전순으로 뒤일 때 처리
+}
+```
+
+  - 문자열 대체
+```
+//myString의 “is” 문자열을 모두 “was”로 바꾸는 예제
+
+string myString = “that is is is man”;
+int pos;
+string replaceString = “was”;
+
+while( (pos = myString.find(“is”)) != string::npos)
+{
+  myString.replace(pos,replaceString.length(),replaceString);
+}
+```
+
+  - int -> string
+```
+string myString;
+int myInt = 10;
+myString = to_string(myInt) ;
+```
+  - string -> int
+```
+string myString = “55”;
+int myInt ;
+myInt = stoi(myString);
+```
+
+- ## 형변환
+  - char -> int
+    - `int num = ch-'0'`
 
 - ## Tips
   - const: 변수의 값이 상수임을 지정하고 프로그래머가 이 변수를 수정하지 못하게 함
