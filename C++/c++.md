@@ -53,7 +53,7 @@ int main()
       - `sizeof` 그 값을 컴파일 이전에 얻어 내는데 동적 메모리 할당은 컴파일 이후에 메모리를 할당하므로 **포인터의 크기인 4를 반환**
       - 동적메모리 할당을 받은 배열의 크기: **`_msize((void*)배열이름)` or `_msize((void*)arr)/sizeof(int)`**
 
-- string
+- ## 문자열
   - 문자열 확장
     - `str = str + "abc";`
     - `str.append("abc");`
