@@ -5,6 +5,7 @@
 * [문자열](#문자열)
 * [팁](#팁)
 * [에러](#에러)
+* [랜덤정수](#랜덤정수)
 
 - ## 동적할당
   - c: (int*)malloc(sizeof(int*)배열이름)
@@ -131,6 +132,16 @@ string myString = “55”;
 int myInt ;
 myInt = stoi(myString);
 ```
+
+- 랜덤정수
+  - 1~100
+```
+#include <cstdlib>
+
+printf("%d\n", (rand()%100)+1);
+
+```
+
 - ## 팁
   - ### const: 변수의 값이 상수임을 지정하고 프로그래머가 이 변수를 수정하지 못하게 함
 
