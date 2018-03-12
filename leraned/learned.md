@@ -69,6 +69,11 @@ int main(int argc, char** argv){
 }
 ==> 20, 10
 ```
+
+### 표준 입출력 라이브러리
+   - C: stdio.h
+   - C++: cstdio
+
 ### Vector vs ArrayList vs Linkedlist vs map
    - Vector: **동적 배열** 로써 미리 일정크기의 메모리를 할당해 놓고 그 이상의 값들이 추가되면 새로운 더 큰 메모리를 할당함
       - 장점: 어떤 종류의 객체도 담을 수 있음. 대용량의 데이터를 효과적으로 다룰 수 있음.
