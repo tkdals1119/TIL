@@ -163,10 +163,9 @@ int main(void)
       function();
       return  0;
 }
-```
     - 위 경우 function 의 이름이 같아 컴파일 시 문제가 발생함
-    - 해결 방법
-```
+
+- 해결 방법 -
 #include <iostream>
 namespace A_COM // => A_COM이라는 이름의 공간을 구성하겠다는 의미
 {
@@ -184,9 +183,10 @@ int main(void)
       B_COM:: function();
       return  0;
 }
-```
     - std::cout => std 라는 네임스페이스(namespace) 안에 선언 및 정의가 되어있는 cout을 참조하겠다는 의미로 해석할 수 있음
       - 출력을 위해 매번 **std::cout** 하기 번거로우므로 **using namespace std** 선언
+```
+
 - ## 에러
   - `'test' 식별자를 찾을 수 없습니다.` 라고 간혹 에러가 뜨곤 한다.
     - 해결1) **test()** 함수를 상단에 함수 원형으로 선언
