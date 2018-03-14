@@ -1,12 +1,33 @@
 # C++
-* [동적할당](동적할당)
+* [STL](#STL)
+* [동적할당](#동적할당)
 * [헤더파일](#헤더파일)
 * [배열](#배열)
 * [문자열](#문자열)
 * [정렬](#정렬)
+* [형변환](#형변환)
+* [랜덤정수](#랜덤정수)
 * [팁](#팁)
 * [에러](#에러)
-* [랜덤정수](#랜덤정수)
+
+- ## STL
+  - STL: 표준 C++ 라이브러리(Standard Template Library)
+  - 프로그램에 필요한 자료구조와 알고리즘을 Template로 제공하는 라이브러리
+  - 구성요소
+    - Container
+      - 객체를 저장하는 객체, 자료구조 라고도 함. 클래스 템플릿으로 구현되어 있음
+      - container는 크게 sequence container(array, vector, list, deque), associative container(set, multiset, map, multimap)로 나뉨
+    - Iterator
+      - 포인터와 비슷한 개념으로 컨테이너의 원소를 가리키고, 가리키는 원소에 접근하여 다음 원소를 가리키는 기능. 순회
+    - Algorithm
+      - 정렬, 삭제, 검색, 연산 등을 해결하는 일반화된 방법을 제공하는 함수 템플릿
+    - Function Object
+      - 함수처럼 동작하는 객체로 operator() 연산자를 오버로딩 한 객체
+      - 컨테이너와 알고리즘 등에 클라이언트 정책을 반영하게 함
+    - Container Adapter
+      - 구성요소의 인터페이스를 변경해 새로운 인터페이스를 갖는 구성요소로 변경(stack, queue, priority_queue)
+    - Allocator
+      - 컨테이너의 메모리 할당 정책을 캡슐화한 클래스 객체로 모든 컨테이너는 자신만의 할당기를 가지고 있음
 
 - ## 동적할당
   - c: (int*)malloc(sizeof(int*)배열이름)
