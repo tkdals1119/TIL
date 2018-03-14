@@ -1,5 +1,6 @@
 # C++
 * [STL](#STL)
+* [Map](#Map)
 * [동적할당](#동적할당)
 * [헤더파일](#헤더파일)
 * [배열](#배열)
@@ -28,6 +29,18 @@
       - 구성요소의 인터페이스를 변경해 새로운 인터페이스를 갖는 구성요소로 변경(stack, queue, priority_queue)
     - Allocator
       - 컨테이너의 메모리 할당 정책을 캡슐화한 클래스 객체로 모든 컨테이너는 자신만의 할당기를 가지고 있음
+
+- ## Map
+  - 선언방법: `map<KeyType, ValueType> 변수이름;`
+  - 입력
+    - insert: `map.insert(pair<KeyType, ValueType>(KeyValue, Value))`
+      - insert를 통해 값의 쌍을 넘겨주어야 하는데 따로 struct를 만들필요 없이 pair을 통해 값의 쌍을 묶어서 만든다음에 map 에 넘기는 방식
+    - map[KeyValue] = Value **(이미 value가 있는 key 값에 쓸 경우 덮어짐)**
+  - 제거
+    - `map.erase(Key)`
+  - 탐색
+    - `if(map.count("abc")!=0) printf("Yes!\n");`
+      - count 함수는 요소의 개수를 리턴함. map의 경우 0 or 1을 리턴하고 multimap은 하나의 키값에 여러개의 요소를 가질 수 있으므로 그 개수를 리턴함
 
 - ## 동적할당
   - c: (int*)malloc(sizeof(int*)배열이름)
