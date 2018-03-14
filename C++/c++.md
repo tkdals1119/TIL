@@ -3,6 +3,7 @@
 * [헤더파일](#헤더파일)
 * [배열](#배열)
 * [문자열](#문자열)
+* [정렬](#정렬)
 * [팁](#팁)
 * [에러](#에러)
 * [랜덤정수](#랜덤정수)
@@ -116,6 +117,29 @@ while( (pos = myString.find(“is”)) != string::npos)
 }
 ```
 
+- ## 정렬
+  - 오름차순(algorithm 헤더파일의 sort 함수 사용)
+```
+#include <algorithm> => sort 함수를 사용하기 위해 algorithm 헤더 선언
+
+int tc;
+cin >> tc;
+int *arr = new int[tc];
+
+sort(arr, arr+tc); => 오름차순 정렬
+```
+
+  - 내림차순(functional 헤더파일의 greater<자료형>()사용)
+```
+#include <algorithm>
+#include <functional> => greater<자료형>() 을 사용하기 위해 functional 헤더 선언
+
+int tc;
+cin >> tc;
+int *arr = new int[tc];
+
+sort(arr, arr+tc, greater<int>()); => 내림차순 정렬
+```
 - ## 형변환
   - ### char -> int
     - `int num = ch-'0'`
@@ -133,7 +157,7 @@ int myInt ;
 myInt = stoi(myString);
 ```
 
-- 랜덤정수
+- ## 랜덤정수
   - 1~100
 ```
 #include <cstdlib>
@@ -163,10 +187,10 @@ int main(void)
       function();
       return  0;
 }
-- 위 경우 function 의 이름이 같아 컴파일 시 문제가 발생함
+> 위 경우 function 의 이름이 같아 컴파일 시 문제가 발생함
 
 
-- 해결 방법 -
+> 해결 방법
 #include <iostream>
 namespace A_COM // => A_COM이라는 이름의 공간을 구성하겠다는 의미
 {
