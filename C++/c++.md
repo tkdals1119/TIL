@@ -31,6 +31,7 @@
       - 컨테이너의 메모리 할당 정책을 캡슐화한 클래스 객체로 모든 컨테이너는 자신만의 할당기를 가지고 있음
 
 - ## Map
+  - 특징: 자동 정렬
   - 선언방법: `map<KeyType, ValueType> 변수이름;`
   - 입력
     - insert: `map.insert(pair<KeyType, ValueType>(KeyValue, Value))`
@@ -41,6 +42,17 @@
   - 탐색
     - `if(map.count("abc")!=0) printf("Yes!\n");`
       - count 함수는 요소의 개수를 리턴함. map의 경우 0 or 1을 리턴하고 multimap은 하나의 키값에 여러개의 요소를 가질 수 있으므로 그 개수를 리턴함
+  - 모든 요소 탐색
+```
+map<int ,int> iMap;
+map<int, int>::iterator itMap;
+
+for(itMap=iMap.begin(); itMap!=iMap; itMap++)
+{
+  printf("%d, %d\n", itMap->first, itMap->second);
+}
+
+```
 
 - ## 동적할당
   - c: (int*)malloc(sizeof(int*)배열이름)
