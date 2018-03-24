@@ -222,6 +222,20 @@ printf("%d\n", (rand()%100)+1);
   - ### c++ 에서 printf를 사용하여 string 출력
     - `printf("%s\n", string.c_str())`
 
+  - ### 출력 속도
+    - 정석: **cin&cout** 보다 **scanf&printf** 가 빠름
+    - 편의: **cin&printf**
+    - **endl** 많이 느림. **\n** 사용
+    - 입출력이 많을 시
+```
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+cout.tie(NULL);
+를 선언하고 cin&cout 사용
+
+> 대신 C 표준 입출력 함수와 혼용하여 사용하지 말 것
+```
+
   - **namespace(이름공간)** 의 의미: 특정 영역(공간)의 범위를 지정하고 이름을 붙여준 것
 ```
 #include <iostream>
