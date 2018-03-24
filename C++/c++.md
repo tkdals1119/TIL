@@ -60,6 +60,10 @@ for(itMap=iMap.begin(); itMap!=iMap; itMap++)
     - `int *arr = new int[size]`(int형 size크기의 배열을 할당해서 그 주소를 arr에게 넘겨줌)
 
 - ## 헤더파일
+  - **<iostream>** -> Input/Out Stream(입출력 스트림)
+    - C++ 표준 라이브러리 중의 하나인 입출력을 위한 헤더파일
+  - **<iostream.h>** -> 구버전, **<iostream>** -> 신버전
+  - c에서 사용하던 헤더를 가져오려면 **<cstdio>** 선언
   - ### `#include <algorithm>`
     - max(), min()
 
