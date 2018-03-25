@@ -110,6 +110,16 @@ int main()
       - 동적메모리 할당을 받은 배열의 크기: **`_msize((void*)배열이름)` or `_msize((void*)arr)/sizeof(int)`**
 
 - ## 문자열
+  - ### 문자열 입출력
+```
+#include <string>
+int main()
+{
+	string st; cin >> st;
+	printf("%s\n", st.c_str());
+	return 0;
+}
+```
   - ### 문자열 확장
     - `str = str + "abc";`
     - `str.append("abc");`
