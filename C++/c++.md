@@ -5,6 +5,7 @@
 * [헤더파일](#헤더파일)
 * [배열](#배열)
 * [문자열](#문자열)
+* [문자열과 문자 배열](#문자열과 문자 배열)
 * [정렬](#정렬)
 * [형변환](#형변환)
 * [랜덤정수](#랜덤정수)
@@ -176,6 +177,20 @@ while( (pos = myString.find(“is”)) != string::npos)
   myString.replace(pos,replaceString.length(),replaceString);
 }
 ```
+- ## 문자열과 문자 배열
+  - 생성
+    - `char arr[SIZE];`
+    - `string s;`
+  - 입력
+    - `cin >> arr;`
+    - `cin >> s;`
+  - 문자열 개수
+    - `int size = strlen(arr);` => `strlen()` 함수를 사용하려면 `#include <cstring>` 추가
+    - `int size = s.length();`
+  - 출력
+    - `cout << arr;` // `for(int i=0; i<strlen(arr); i++) cout << arr[i]`
+    - `cout << s;` // `for(int i=0; i<strlen(arr); i++) cout << s[i]`
+
 
 - ## 정렬
   - 오름차순(algorithm 헤더파일의 sort 함수 사용)
