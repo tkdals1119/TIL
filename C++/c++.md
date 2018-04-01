@@ -188,8 +188,8 @@ while( (pos = myString.find(“is”)) != string::npos)
     - `int size = strlen(arr);` => `strlen()` 함수를 사용하려면 `#include <cstring>` 추가
     - `int size = s.length();`
   - 출력
-    - `cout << arr;` // `for(int i=0; i<strlen(arr); i++) cout << arr[i]`
-    - `cout << s;` // `for(int i=0; i<strlen(arr); i++) cout << s[i]`
+    - `cout >> arr;` // `for(int i=0; i<strlen(arr); i++) cout << arr[i]`
+    - `cout >> s;` // `for(int i=0; i<strlen(arr); i++) cout << s[i]`
 
 
 - ## 정렬
