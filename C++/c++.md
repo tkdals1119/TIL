@@ -121,6 +121,17 @@ int main()
 	return 0;
 }
 ```
+  - ### 공백을 포함한 문자열 입출력
+```
+#include <string> => 'getline' 함수를 사용하려면 헤더를 선언해야함
+#include <cstring> => c언어 형식의 입출력 사용 시 선언
+
+string str;
+getline(cin, str);
+
+printf("%s\n", str.c_str());
+
+```
   - ### 문자열 확장
     - `str = str + "abc";`
     - `str.append("abc");`
