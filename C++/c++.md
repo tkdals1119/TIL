@@ -5,7 +5,7 @@
 * [헤더파일](#헤더파일)
 * [배열](#배열)
 * [문자열](#문자열)
-* [문자열과 문자 배열](#문자열과 문자 배열)
+* [포인터](#포인터)
 * [정렬](#정렬)
 * [형변환](#형변환)
 * [랜덤정수](#랜덤정수)
@@ -188,7 +188,7 @@ while( (pos = myString.find(“is”)) != string::npos)
   myString.replace(pos,replaceString.length(),replaceString);
 }
 ```
-- ## 문자열과 문자 배열
+- ### 문자열과 문자 배열
   - 생성
     - `char arr[SIZE];`
     - `string s;`
@@ -202,6 +202,50 @@ while( (pos = myString.find(“is”)) != string::npos)
     - `cout >> arr;` // `for(int i=0; i<strlen(arr); i++) cout << arr[i]`
     - `cout >> s;` // `for(int i=0; i<strlen(arr); i++) cout << s[i]`
 
+- ## 포인터
+  - 포인터: 주소 값 저장
+```
+int a = 10;
+int *b = &a;
+
+printf("%d\n", b) => a의 주소값 출력
+printf("%d\n", *b) => a의 값 출력
+```
+  - 레퍼런스: 값 저장
+```
+int a = 10;
+int &b = a;
+b = 20;
+
+printf("%d\n", a) => 20 출력
+
+> 일반적으로 변수를 선언한다는 것은 '해당 주소'와 '이름표(a)' 가 하나씩 만들어지는 것이다. 레퍼런스 변수는 해당 주소에 이름표를 두 개(a, b)를 만들어 준다는 것이다.
+즉, b의 값을 변경하면 a의 값도 변경된다.
+
+```
+  - 포인터 연결
+    - 하나의 포인터 연결
+```
+int a = 10;
+int *b = &a; => b에는 a의 주소값 저장. *b는 a의 주소에 저장 된 값
+int *bb = b; => bb에는 b에 저장 된 a의 주소값. *bb는 b에 저장 된 a의 주소에 저장 된 값
+```
+
+    - 하나의 포인터를 다중포인터로 연결
+```
+int a = 10;
+int *b = &a;
+int **bb = &b;
+
+printf("a의 주소 %d\n", &a); => 7339596
+printf("b의 주소 %d\n", &b); => 7339584
+
+printf("&bb: %d\n", &bb); => bb 자신의 주소(7339576)
+printf("bb: %d\n", bb); => b의 주소(7339584)
+printf("*bb: %d\n", *bb); => b가 가리키는 주소(a 주소)(7339596)
+printf("**bb: %d\n", **bb); => a의 값(10)
+
+```
 
 - ## 정렬
   - 오름차순(algorithm 헤더파일의 sort 함수 사용)
