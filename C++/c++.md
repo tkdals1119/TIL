@@ -111,6 +111,9 @@ int main()
       - 동적메모리 할당을 받은 배열의 크기: **`_msize((void*)배열이름)` or `_msize((void*)arr)/sizeof(int)`**
 
 - ## 문자열
+  - ### **char *str** 와 **char str[]** 의 차이
+    - **char *str** : 문자열 상수의 주소를 담음( 부분 수정 안됌 )
+    - **char str[]** : 문자열 값을 담음 ( 수정 가능 )
   - ### 문자열 입출력
 ```
 #include <string>
