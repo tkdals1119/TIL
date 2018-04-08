@@ -160,6 +160,19 @@ if(str.find("abc"!=string::npos))
 ```
     - => string::find() 함수는 찾는 단어나 문자열이 없으면 **string::npos** 를 리턴
 
+  - ### 문자열 자르기
+```
+#include <sstream> => 헤더 선언해야 'stringstream' 사용 가능
+string str = "abc 123 apple";
+stringstream iss(str);
+string token;
+
+while (getline(iss, token, ' '))
+{
+		reverserString(token);
+		cout << " ";
+}
+```
   - ### 문자열 비교
 ```
 if (myString.compare(myString2) == 0)
