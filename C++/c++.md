@@ -172,6 +172,8 @@ while (getline(iss, token, ' '))
 		reverserString(token);
 		cout << " ";
 }
+> 'strtok_s(str, " ", &context)로도 가능'
+> context에는 분리 후 남은 문자열 저장
 ```
   - ### 문자열 비교
 ```
