@@ -67,6 +67,7 @@ for(itMap=iMap.begin(); itMap!=iMap; itMap++)
   - c에서 사용하던 헤더를 가져오려면 `<cstdio>` 선언
   - `include <algorithm>`
     - max(), min()
+  - `sqrt()` 함수를 사용하려면 `<cmath>` 헤더 선언
 
 - ## 배열
   - 정적할당: Stack // 동적할당: Heap
@@ -329,6 +330,8 @@ printf("%d\n", (rand()%100)+1);
     - 편의: **cin&printf**
     - **endl** 많이 느림. **\n** 사용
     - 입출력이 많을 시
+  - ### VS에선 컴파일 되는데 백준에선 컴파일 에러가 생길 떄
+    - VS 말고 DEV로 실행하면 에러를 알 수 있음
 ```
 ios_base::sync_with_stdio(false);
 cin.tie(NULL);
