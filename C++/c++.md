@@ -341,6 +341,18 @@ cout.tie(NULL);
 > 대신 C 표준 입출력 함수와 혼용하여 사용하지 말 것
 ```
 
+  - 입출력 형식
+```
+ios_base::sync_with_stdio
+cin.tie(NULL);
+cout.tie(NULL);
+
+cin >> num;
+cout << num << "\n";
+
+> 제일 안정적
+```
+
   - **namespace(이름공간)** 의 의미: 특정 영역(공간)의 범위를 지정하고 이름을 붙여준 것
 ```
 #include <iostream>
