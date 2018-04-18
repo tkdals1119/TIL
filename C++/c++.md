@@ -4,6 +4,7 @@
 * [동적할당](#동적할당)
 * [헤더파일](#헤더파일)
 * [배열](#배열)
+* [벡터](#벡터)
 * [문자열](#문자열)
 * [포인터](#포인터)
 * [정렬](#정렬)
@@ -67,6 +68,13 @@ for(itMap=iMap.begin(); itMap!=iMap; itMap++)
   - c에서 사용하던 헤더를 가져오려면 `<cstdio>` 선언
   - `include <algorithm>`
     - max(), min()
+    - 정렬: sort(), 중복 제거: unique()
+```
+vector<string>::iterator itr;
+vector<string>::iterator itr_end;
+
+itr_end = unique(itr.begin(), itr.end());
+```
   - `sqrt()` 함수를 사용하려면 `<cmath>` 헤더 선언
 
 - ## 배열
@@ -110,6 +118,44 @@ int main()
       - ### 동적 할당 받은 배열의 크기 구하기
       - `sizeof` 그 값을 컴파일 이전에 얻어 내는데 동적 메모리 할당은 컴파일 이후에 메모리를 할당하므로 **포인터의 크기인 4를 반환**
       - 동적메모리 할당을 받은 배열의 크기: **`_msize((void*)배열이름)` or `_msize((void*)arr)/sizeof(int)`**
+
+- ## 벡터
+  - `include <vector>` 헤더파일 추가
+  - 선언: `vector<DataType> 변수명`
+  - 삽입: `vector.push_back(변수명)`
+  - 탐색: `iterator` 사용
+```
+vector<string> str_v;
+vector<string>::iterator itr=str_v.begin();
+
+for (itr = str_v.begin(); itr != str_v.end; itr++)
+{
+	cout << *itr << "\n";
+}
+```
+  - 정렬: `sort()` 알고리즘 사용
+    - 구조체를 정렬하거나 정렬 기준을 바꾸고 싶은 경우 특정 형태의 함수 필요
+```
+sort(str_v.begin(), str_v.end(), comp);
+
+bool comp (const DataType &a, const DataType &b){
+    return (a가 b보다 앞에 올 조건);
+}
+
+> ex: 사전 순으로 정렬하고 싶은 경우
+> return a < b;
+```
+  - 중복 제거: `unique()` 사용
+    - `unique(iterator.begin(), iterator.end())`
+    - 출력
+```
+vector<string>::iterator itr_end;
+itr_end = unique(str_v.begin(), str_v.end());
+for (itr = str_v.begin(); itr < itr_end; itr++)
+{
+		cout << *itr << "\n";
+}
+```
 
 - ## 문자열
   - ### **char *str** 와 **char str[]** 의 차이
@@ -399,3 +445,7 @@ int main(void)
 
   - `LINK : fatal error LNK1168: XXX.exe을(를) 쓰기용으로 열수 없습니다.`
     - 해결) 이미 exe파일이 실행중이기 때문
+
+  - `vector iterator not dereferencable`
+    - vector의 크기가 0이거나, 범위를 벗어난 iterator를 사용한 경우
+    - ex: iterator.end() 는 실제로 비어 있음. 벡터 마지막의 다음을 가리키고 있기 때문
