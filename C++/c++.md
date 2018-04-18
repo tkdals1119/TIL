@@ -347,6 +347,8 @@ cout << fixed;
 cout.unsetf(ios::fixed);
 
 ```
+    - 번외
+      - **/** 결과를 소수점까지 출력하고 싶으면 당연히 실수 끼리 계산해야함. 실수 자주함
 - ## 형변환
   - ### char -> int
     - `int num = ch-'0'`
