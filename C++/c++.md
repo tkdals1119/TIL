@@ -313,7 +313,7 @@ printf("**bb: %d\n", **bb); => a의 값(10)
 ```
 
 - ## 정렬
-  - 오름차순(algorithm 헤더파일의 sort 함수 사용)
+  - ### 오름차순(algorithm 헤더파일의 sort 함수 사용)
 ```
 #include <algorithm> => sort 함수를 사용하기 위해 algorithm 헤더 선언
 
@@ -324,7 +324,7 @@ int *arr = new int[tc];
 sort(arr, arr+tc); => 오름차순 정렬
 ```
 
-  - 내림차순(functional 헤더파일의 greater<자료형>()사용)
+  - ### 내림차순(functional 헤더파일의 greater<자료형>()사용)
 ```
 #include <algorithm>
 #include <functional> => greater<자료형>() 을 사용하기 위해 functional 헤더 선언
@@ -334,6 +334,18 @@ cin >> tc;
 int *arr = new int[tc];
 
 sort(arr, arr+tc, greater<int>()); => 내림차순 정렬
+```
+  - ### 소수점 정렬
+    - ex)
+```
+> 소수점 7자리 까지 출력
+
+cout.precision(7);
+cout << fixed;
+
+> 해제 하려면
+cout.unsetf(ios::fixed);
+
 ```
 - ## 형변환
   - ### char -> int
