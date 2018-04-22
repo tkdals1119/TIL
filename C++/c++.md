@@ -69,6 +69,9 @@ for(itMap=iMap.begin(); itMap!=iMap; itMap++)
   - `include <algorithm>`
     - max(), min()
     - 정렬: sort(), 중복 제거: unique()
+  - `include <cmath>`
+    - 제곱근: sqrt(num)
+    - 절대값: abs(num-num2)
 ```
 vector<string>::iterator itr;
 vector<string>::iterator itr_end;
