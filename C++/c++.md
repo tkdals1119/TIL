@@ -6,6 +6,7 @@
 * [배열](#배열)
 * [벡터](#벡터)
 * [문자열](#문자열)
+* [스택](#스택)
 * [포인터](#포인터)
 * [정렬](#정렬)
 * [형변환](#형변환)
@@ -269,6 +270,15 @@ while( (pos = myString.find(“is”)) != string::npos)
   - 출력
     - `cout >> arr;` // `for(int i=0; i<strlen(arr); i++) cout << arr[i]`
     - `cout >> s;` // `for(int i=0; i<strlen(arr); i++) cout << s[i]`
+
+- ## 스택
+  - 헤더파일 선언: `include <stack>`
+  - `stack<int> st` : 디폴트 컨테이너 deque<int>를 사용하여 stack 컨테이너 객체를 생성
+  - `stack<int, vector<int>> st` : vector 컨테이너를 적용한 정수를 저장하는 stack 컨테이너를 생성
+  - `st.push(x)` : 스택에 데이터 x를 입력
+  - `st.pop()` : 스택의 데이터를 삭제
+  - `st.top()` : 스택의 데이터를 반환
+  - `st.empty()` : 스택이 비어있는지 판단
 
 - ## 포인터
   - 포인터: 주소 값 저장
