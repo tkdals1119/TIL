@@ -193,6 +193,7 @@ printf("%s\n", str.c_str());
   - ### 문자열 길이
     - `str.size()`
     - `str.length()`
+      - 이름만 다를 뿐 같은 일을 하는 멤버변수
 
   - ### 문자열 길이2
     - `str.capacity()` => str 이 갖고 있는 길이 반환
