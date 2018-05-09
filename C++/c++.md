@@ -281,6 +281,14 @@ while( (pos = myString.find(“is”)) != string::npos)
   - `st.top()` : 스택의 데이터를 반환
   - `st.empty()` : 스택이 비어있는지 판단
 
+- ## 큐
+  - 헤더파일 선언: `include <queue>`
+  - `queue<int> q` : 디폴트 컨테이너 deque<int>를 사용하여 stack 컨테이너 객체를 생성
+  - `q.push(x)` :  큐에 원소를 추가(뒤에)
+  - `q.pop()` : 큐에 있는 원소를 삭제(앞에)
+  - `q.front()` : 큐 제일 앞에 있는 원소를 반환
+  - `q.back()` : 큐 제일 뒤에 있는 원소를 반환
+
 - ## 포인터
   - 포인터: 주소 값 저장
 ```
