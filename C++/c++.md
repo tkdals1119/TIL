@@ -163,6 +163,7 @@ for (itr = str_v.begin(); itr < itr_end; itr++)
 ```
 
 - ## 문자열
+  - ### 간혹 갑자기 `cin >> str` 에 에러가 떠서 벙쪘던 적이 있음. `#include <string>` 을 또 까먹었을 경우다.
   - ### **char *str** 와 **char str[]** 의 차이
     - **char *str** : 문자열 상수의 주소를 담음( 부분 수정 안됌 )
     - **char str[]** : 문자열 값을 담음 ( 수정 가능 )
